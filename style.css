@@ -102,8 +102,8 @@ html, body {
 /* Digital display */
 #digital-container {
     position: absolute;
-    width: 72%;
-    bottom: 14%;
+    width: 78%;
+    bottom: 27%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -111,14 +111,14 @@ html, body {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
 }
 #digital-time {
-    font-size: 8vmin;
+    font-size: 18vmin;
     font-weight: 300;
     letter-spacing: 2px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     transition: color var(--transition-speed);
 }
 #digital-date {
-    font-size: 3vmin;
+    font-size: 7vmin;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -126,8 +126,8 @@ html, body {
     transition: opacity var(--transition-speed);
 }
 @media (min-width: 600px) {
-    #digital-time { font-size: 48px; }
-    #digital-date { font-size: 18px; }
+    #digital-time { font-size: 116px; }
+    #digital-date { font-size: 44px; }
 }
 
 /* Hands */
