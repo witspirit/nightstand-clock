@@ -21,6 +21,12 @@
     var digitalTime = document.getElementById('digital-time');
     var digitalDate = document.getElementById('digital-date');
 
+    var handAngleState = {
+        second: { raw: null, offset: 0 },
+        minute: { raw: null, offset: 0 },
+        hour: { raw: null, offset: 0 }
+    };
+
     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -89,6 +95,24 @@
         }
     }
 
+    function getContinuousAngle(rawAngle, state) {
+        if (state.raw === null) {
+            state.raw = rawAngle;
+            return rawAngle;
+        }
+
+        var delta = rawAngle - state.raw;
+
+        if (delta < -180) {
+            state.offset += 360;
+        } else if (delta > 180) {
+            state.offset -= 360;
+        }
+
+        state.raw = rawAngle;
+        return rawAngle + state.offset;
+    }
+
     var tickCount = 0;
 
     function tick() {
@@ -104,15 +128,19 @@
             var mAngle = (minutes + seconds / 60 + ms / 60000) * 6;
             var hAngle = ((hours % 12) + minutes / 60 + seconds / 3600) * 30;
 
+            var sContinuous = getContinuousAngle(sAngle, handAngleState.second);
+            var mContinuous = getContinuousAngle(mAngle, handAngleState.minute);
+            var hContinuous = getContinuousAngle(hAngle, handAngleState.hour);
+
             // Apply transformations
-            secondHand.style.transform = 'rotate(' + sAngle + 'deg)';
-            secondHand.style.webkitTransform = 'rotate(' + sAngle + 'deg)';
+            secondHand.style.transform = 'rotate(' + sContinuous + 'deg)';
+            secondHand.style.webkitTransform = 'rotate(' + sContinuous + 'deg)';
             
-            minuteHand.style.transform = 'rotate(' + mAngle + 'deg)';
-            minuteHand.style.webkitTransform = 'rotate(' + mAngle + 'deg)';
+            minuteHand.style.transform = 'rotate(' + mContinuous + 'deg)';
+            minuteHand.style.webkitTransform = 'rotate(' + mContinuous + 'deg)';
             
-            hourHand.style.transform = 'rotate(' + hAngle + 'deg)';
-            hourHand.style.webkitTransform = 'rotate(' + hAngle + 'deg)';
+            hourHand.style.transform = 'rotate(' + hContinuous + 'deg)';
+            hourHand.style.webkitTransform = 'rotate(' + hContinuous + 'deg)';
 
             // Update digital info
             updateDigitalTime(now);
