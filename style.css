@@ -153,24 +153,18 @@ html, body {
     height: 25%;
     margin-left: -6px;
     background-color: var(--hand-color);
-    margin-bottom: -15px;
-    padding-bottom: 15px;
 }
 #minute-hand {
     width: 8px;
     height: 38%;
     margin-left: -4px;
     background-color: #eee;
-    margin-bottom: -15px;
-    padding-bottom: 15px;
 }
 #second-hand {
     width: 4px;
     height: 42%;
     margin-left: -2px;
     background-color: var(--primary-color);
-    margin-bottom: -25px;
-    padding-bottom: 25px;
 }
 
 /* Center dot */
@@ -186,4 +180,5 @@ html, body {
     border: 4px solid var(--primary-color);
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    z-index: 3;
 }

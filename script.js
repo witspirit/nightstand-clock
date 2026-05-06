@@ -105,14 +105,14 @@
             var hAngle = ((hours % 12) + minutes / 60 + seconds / 3600) * 30;
 
             // Apply transformations
-            secondHand.style.transform = 'translateX(-50%) rotate(' + sAngle + 'deg)';
-            secondHand.style.webkitTransform = 'translateX(-50%) rotate(' + sAngle + 'deg)';
+            secondHand.style.transform = 'rotate(' + sAngle + 'deg)';
+            secondHand.style.webkitTransform = 'rotate(' + sAngle + 'deg)';
             
-            minuteHand.style.transform = 'translateX(-50%) rotate(' + mAngle + 'deg)';
-            minuteHand.style.webkitTransform = 'translateX(-50%) rotate(' + mAngle + 'deg)';
+            minuteHand.style.transform = 'rotate(' + mAngle + 'deg)';
+            minuteHand.style.webkitTransform = 'rotate(' + mAngle + 'deg)';
             
-            hourHand.style.transform = 'translateX(-50%) rotate(' + hAngle + 'deg)';
-            hourHand.style.webkitTransform = 'translateX(-50%) rotate(' + hAngle + 'deg)';
+            hourHand.style.transform = 'rotate(' + hAngle + 'deg)';
+            hourHand.style.webkitTransform = 'rotate(' + hAngle + 'deg)';
 
             // Update digital info
             updateDigitalTime(now);
