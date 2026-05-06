@@ -10,8 +10,6 @@
     --bg-color: #000;
     --primary-color: #ff3b30; /* accent for second hand */
     --hand-color: #fff;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-blur: 10px;
     --transition-speed: 0.2s;
     --clock-padding: 3vmin;
 }
@@ -101,20 +99,16 @@ html, body {
     transition: background-color var(--transition-speed);
 }
 
-/* Digital display (glassmorphism) */
+/* Digital display */
 #digital-container {
     position: absolute;
-    width: 90%;
-    bottom: 15%;
+    width: 72%;
+    bottom: 14%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    background: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    border-radius: 12px;
-    padding: 8px 0;
+    color: rgba(255, 255, 255, 0.96);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
 }
 #digital-time {
     font-size: 8vmin;
