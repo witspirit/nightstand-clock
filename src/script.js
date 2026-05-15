@@ -33,6 +33,8 @@
         var digitalTime = container.querySelector('#digital-time');
         var digitalDate = container.querySelector('#digital-date');
 
+        var transformProperty = ('transform' in secondHand.style) ? 'transform' : 'webkitTransform';
+
         var handAngleState = {
             second: { raw: null, offset: 0 },
             minute: { raw: null, offset: 0 },
@@ -143,14 +145,9 @@
                 var hContinuous = getContinuousAngle(hAngle, handAngleState.hour);
 
                 // Apply transformations
-                secondHand.style.transform = 'rotate(' + sContinuous + 'deg)';
-                secondHand.style.webkitTransform = 'rotate(' + sContinuous + 'deg)';
-                
-                minuteHand.style.transform = 'rotate(' + mContinuous + 'deg)';
-                minuteHand.style.webkitTransform = 'rotate(' + mContinuous + 'deg)';
-                
-                hourHand.style.transform = 'rotate(' + hContinuous + 'deg)';
-                hourHand.style.webkitTransform = 'rotate(' + hContinuous + 'deg)';
+                secondHand.style[transformProperty] = 'rotate(' + sContinuous + 'deg)';
+                minuteHand.style[transformProperty] = 'rotate(' + mContinuous + 'deg)';
+                hourHand.style[transformProperty] = 'rotate(' + hContinuous + 'deg)';
 
                 // Update digital info only when minute changes
                 var minuteKey = (now.getDate() * 1440) + (hours * 60) + minutes;
