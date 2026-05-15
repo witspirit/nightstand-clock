@@ -88,19 +88,16 @@
         function updateDigitalTime(now) {
             var h = now.getHours();
             var m = now.getMinutes();
-            
+
             var hStr = h < 10 ? '0' + h : h;
             var mStr = m < 10 ? '0' + m : m;
-            
-            var timeString = hStr + ':' + mStr;
-            if (digitalTime.innerText !== timeString) {
-                digitalTime.innerText = timeString;
-                
-                var dayOfWeek = days[now.getDay()];
-                var date = now.getDate();
-                var month = months[now.getMonth()];
-                digitalDate.innerText = dayOfWeek + ', ' + month + ' ' + date;
-            }
+
+            digitalTime.textContent = hStr + ':' + mStr;
+
+            var dayOfWeek = days[now.getDay()];
+            var date = now.getDate();
+            var month = months[now.getMonth()];
+            digitalDate.textContent = dayOfWeek + ', ' + month + ' ' + date;
         }
 
         function getContinuousAngle(rawAngle, state) {
@@ -124,6 +121,7 @@
         var isRunning = false;
         var animationFrameId = null;
         var lastColorUpdateMinute = -1;
+        var lastDigitalMinuteKey = -1;
 
         function tick() {
             if (!isRunning) return;
@@ -154,8 +152,12 @@
                 hourHand.style.transform = 'rotate(' + hContinuous + 'deg)';
                 hourHand.style.webkitTransform = 'rotate(' + hContinuous + 'deg)';
 
-                // Update digital info
-                updateDigitalTime(now);
+                // Update digital info only when minute changes
+                var minuteKey = (now.getDate() * 1440) + (hours * 60) + minutes;
+                if (minuteKey !== lastDigitalMinuteKey) {
+                    updateDigitalTime(now);
+                    lastDigitalMinuteKey = minuteKey;
+                }
 
                 // Optimization: Update background color only once a minute
                 if (minutes !== lastColorUpdateMinute) {
