@@ -122,7 +122,7 @@
 
         var isRunning = false;
         var animationFrameId = null;
-        var lastColorUpdateMinute = -1;
+        var lastColorUpdateKey = -1;
         var lastDigitalMinuteKey = -1;
 
         function tick() {
@@ -156,11 +156,12 @@
                     lastDigitalMinuteKey = minuteKey;
                 }
 
-                // Optimization: Update background color only once a minute
-                if (minutes !== lastColorUpdateMinute) {
+                // Optimization: Update background color only when visible minute changes
+                var colorKey = (now.getDate() * 1440) + (hours * 60) + minutes;
+                if (colorKey !== lastColorUpdateKey) {
                     var bgColor = getBackgroundColorForTime(hours, minutes, seconds);
                     document.body.style.setProperty('--bg-color', bgColor);
-                    lastColorUpdateMinute = minutes;
+                    lastColorUpdateKey = colorKey;
                 }
                 
             } catch (e) {
