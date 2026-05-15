@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightstand Clock - Test Page</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <style>
+        /* Test Page specific styles */
+        body {
+            display: flex;
+            flex-direction: column;
+            overflow: auto; /* allow scrolling on test page */
+        }
+        #test-controls {
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            z-index: 10;
+        }
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        label {
+            font-size: 14px;
+            color: #ccc;
+        }
+        input, select, button {
+            padding: 5px;
+            font-size: 16px;
+        }
+        #clock-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        /* Override body background behavior for the wrapper instead */
+        body { background-color: #222 !important; }
+        #clock-wrapper { background-color: var(--bg-color, #000); transition: background-color 1s linear; width: 100%; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="test-controls">
+        <div class="control-group">
+            <label for="time-mode">Time Mode</label>
+            <select id="time-mode">
+                <option value="real">Real Time</option>
+                <option value="mock">Mock Time</option>
+            </select>
+        </div>
+        
+        <div class="control-group" id="mock-time-group" style="display: none;">
+            <label for="mock-time">Mock Time</label>
+            <input type="time" id="mock-time" value="12:00">
+        </div>
+
+        <div class="control-group" id="mock-seconds-group" style="display: none;">
+            <label for="mock-seconds">Seconds</label>
+            <input type="number" id="mock-seconds" min="0" max="59" value="0" style="width: 60px;">
+        </div>
+
+        <div class="control-group">
+            <label for="size-slider">Container Size</label>
+            <input type="range" id="size-slider" min="30" max="100" value="100">
+        </div>
+    </div>
+
+    <div id="clock-wrapper">
+        <div id="clock-container">
+            <div id="clock-face">
+                <div id="ticks"></div>
+                <div id="digital-container">
+                    <div id="digital-time">--:--</div>
+                    <div id="digital-date">--</div>
+                </div>
+                <div id="hour-hand" class="hand"></div>
+                <div id="minute-hand" class="hand"></div>
+                <div id="second-hand" class="hand"></div>
+                <div id="center-dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Set test mode so script.js doesn't auto-init -->
+    <script>window.__TEST_MODE__ = true;</script>
+    <script src="../src/script.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>

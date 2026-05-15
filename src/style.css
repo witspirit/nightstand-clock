@@ -125,10 +125,6 @@ html, body {
     opacity: 0.8;
     transition: opacity var(--transition-speed);
 }
-@media (min-width: 600px) {
-    #digital-time { font-size: 116px; }
-    #digital-date { font-size: 44px; }
-}
 
 /* Hands */
 .hand {
