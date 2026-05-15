@@ -102,23 +102,23 @@ html, body {
 /* Digital display */
 #digital-container {
     position: absolute;
-    width: 78%;
-    bottom: 27%;
+    width: 72%;
+    top: 68%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     color: rgba(255, 255, 255, 0.96);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
 }
 #digital-time {
-    font-size: 18vmin;
+    font-size: 14vmin;
     font-weight: 300;
     letter-spacing: 2px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     transition: color var(--transition-speed);
 }
 #digital-date {
-    font-size: 7vmin;
+    font-size: 5vmin;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
