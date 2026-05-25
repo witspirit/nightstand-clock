@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var useMock = false;
     var mockDate = new Date();
-    var pendingArrowDirection = 0;
-    var pendingArrowBaseValue = null;
 
     var resyncReasonLabels = {
         start: 'Clock start',
@@ -57,79 +55,94 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateMockDateFromInput() {
-        var timeVal = mockTimeInput.value;
-        if (timeVal) {
-            var parsed = parseTimeValue(timeVal);
-            mockDate.setHours(parsed.hours);
-            mockDate.setMinutes(parsed.minutes);
-            mockDate.setSeconds(parsed.seconds);
-        }
+        var parsed = parseTimeValue(mockTimeInput.value);
+        if (!parsed) return false;
+        mockDate.setHours(parsed.hours);
+        mockDate.setMinutes(parsed.minutes);
+        mockDate.setSeconds(parsed.seconds);
+        return true;
     }
 
     function parseTimeValue(timeVal) {
-        var parts = (timeVal || '').split(':');
-        return {
-            hours: parseInt(parts[0], 10) || 0,
-            minutes: parseInt(parts[1], 10) || 0,
-            seconds: parts.length > 2 ? (parseInt(parts[2], 10) || 0) : 0
-        };
+        var raw = String(timeVal || '').trim();
+        var matched = raw.match(/^(\d{1,2}):(\d{1,2})(?::(\d{1,2}))?$/);
+        if (!matched) {
+            return null;
+        }
+
+        var hours = parseInt(matched[1], 10);
+        var minutes = parseInt(matched[2], 10);
+        var seconds = (matched[3] != null) ? parseInt(matched[3], 10) : 0;
+
+        if (hours > 23 || minutes > 59 || seconds > 59) {
+            return null;
+        }
+
+        return { hours: hours, minutes: minutes, seconds: seconds };
     }
 
     function formatTimeParts(parts) {
         return toTwoDigits(parts.hours) + ':' + toTwoDigits(parts.minutes) + ':' + toTwoDigits(parts.seconds);
     }
 
+    function getSelectedSection(inputEl) {
+        var position = inputEl.selectionStart;
+        if (typeof position !== 'number') {
+            return 'second';
+        }
+        if (position <= 2) {
+            return 'hour';
+        }
+        if (position <= 5) {
+            return 'minute';
+        }
+        return 'second';
+    }
+
+    function focusSection(inputEl, section) {
+        if (section === 'hour') {
+            inputEl.setSelectionRange(0, 2);
+            return;
+        }
+        if (section === 'minute') {
+            inputEl.setSelectionRange(3, 5);
+            return;
+        }
+        inputEl.setSelectionRange(6, 8);
+    }
+
     function getWrappedSegmentValue(baseParts, section, direction) {
-        var next = {
-            hours: baseParts.hours,
-            minutes: baseParts.minutes,
-            seconds: baseParts.seconds
+        var stepped = new Date(2000, 0, 1, baseParts.hours, baseParts.minutes, baseParts.seconds, 0);
+
+        if (section === 'hour') {
+            stepped.setHours(stepped.getHours() + direction);
+        } else if (section === 'minute') {
+            stepped.setMinutes(stepped.getMinutes() + direction);
+        } else {
+            stepped.setSeconds(stepped.getSeconds() + direction);
+        }
+
+        return formatTimeParts({
+            hours: stepped.getHours(),
+            minutes: stepped.getMinutes(),
+            seconds: stepped.getSeconds()
+        });
+    }
+
+    function stepMockSection(section, direction) {
+        var parsed = parseTimeValue(mockTimeInput.value) || {
+            hours: mockDate.getHours(),
+            minutes: mockDate.getMinutes(),
+            seconds: mockDate.getSeconds()
         };
 
-        if (section === 'hour') {
-            next.hours = (next.hours + direction + 24) % 24;
-            return formatTimeParts(next);
-        }
-
-        if (section === 'minute') {
-            next.minutes = (next.minutes + direction + 60) % 60;
-            return formatTimeParts(next);
-        }
-
-        next.seconds = (next.seconds + direction + 60) % 60;
-        return formatTimeParts(next);
-    }
-
-    function inferSteppedSection(baseValue, observedValue, direction) {
-        var baseParts = parseTimeValue(baseValue);
-        var normalizedObserved = formatTimeParts(parseTimeValue(observedValue));
-        var sections = ['second', 'minute', 'hour'];
-
-        for (var i = 0; i < sections.length; i++) {
-            var section = sections[i];
-            var candidate = getWrappedSegmentValue(baseParts, section, direction);
-            if (candidate === normalizedObserved) {
-                return section;
-            }
-        }
-
-        return 'minute';
-    }
-
-    function getSectionStepSeconds(section) {
-        if (section === 'hour') {
-            return 3600;
-        }
-        if (section === 'minute') {
-            return 60;
-        }
-        return 1;
-    }
-
-    function stepMockTime(secondsDelta) {
-        mockDate = new Date(mockDate.getTime() + (secondsDelta * 1000));
+        var stepped = parseTimeValue(getWrappedSegmentValue(parsed, section, direction));
+        mockDate.setHours(stepped.hours);
+        mockDate.setMinutes(stepped.minutes);
+        mockDate.setSeconds(stepped.seconds);
         syncMockInputWithDate();
         clock.updateNow();
+        focusSection(mockTimeInput, section);
     }
 
     var timeProvider = function() {
@@ -164,17 +177,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     mockTimeInput.addEventListener('input', function() {
-        if (useMock && pendingArrowDirection !== 0 && pendingArrowBaseValue) {
-            var section = inferSteppedSection(pendingArrowBaseValue, mockTimeInput.value, pendingArrowDirection);
-            var stepSeconds = getSectionStepSeconds(section);
-            stepMockTime(pendingArrowDirection * stepSeconds);
-            pendingArrowDirection = 0;
-            pendingArrowBaseValue = null;
+        if (!useMock) {
             return;
         }
 
-        updateMockDateFromInput();
-        clock.updateNow();
+        if (updateMockDateFromInput()) {
+            clock.updateNow();
+        }
     });
 
     mockTimeInput.addEventListener('keydown', function(event) {
@@ -186,8 +195,20 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        pendingArrowDirection = event.key === 'ArrowUp' ? 1 : -1;
-        pendingArrowBaseValue = formatTimeParts(parseTimeValue(mockTimeInput.value));
+        event.preventDefault();
+        var direction = event.key === 'ArrowUp' ? 1 : -1;
+        var section = getSelectedSection(mockTimeInput);
+        stepMockSection(section, direction);
+    });
+
+    mockTimeInput.addEventListener('blur', function() {
+        if (!useMock) {
+            return;
+        }
+
+        if (!updateMockDateFromInput()) {
+            syncMockInputWithDate();
+        }
     });
 
     sizeSlider.addEventListener('input', function() {
