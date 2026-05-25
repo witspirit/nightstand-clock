@@ -133,8 +133,19 @@ html, body {
     left: 50%;
     transform-origin: 50% 100%;
     -webkit-transform-origin: 50% 100%;
+    animation-name: hand-rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-fill-mode: both;
+    -webkit-animation-name: hand-rotate;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: both;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    will-change: transform;
     z-index: 2;
 }
 #hour-hand {
@@ -154,6 +165,16 @@ html, body {
     height: 42%;
     margin-left: -2px;
     background-color: var(--primary-color);
+}
+
+@-webkit-keyframes hand-rotate {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes hand-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 /* Center dot */

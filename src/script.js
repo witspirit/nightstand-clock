@@ -34,12 +34,9 @@
         var digitalDate = container.querySelector('#digital-date');
 
         var transformProperty = ('transform' in secondHand.style) ? 'transform' : 'webkitTransform';
-
-        var handAngleState = {
-            second: { raw: null, offset: 0 },
-            minute: { raw: null, offset: 0 },
-            hour: { raw: null, offset: 0 }
-        };
+        var handAnimationEnabled = options.animateHands !== false;
+        var maintenanceIntervalMs = options.maintenanceIntervalMs || 1000;
+        var driftJumpThresholdMs = options.driftJumpThresholdMs || 4000;
 
         var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -102,52 +99,129 @@
             digitalDate.textContent = dayOfWeek + ', ' + month + ' ' + date;
         }
 
-        function getContinuousAngle(rawAngle, state) {
-            if (state.raw === null) {
-                state.raw = rawAngle;
-                return rawAngle;
-            }
-
-            var delta = rawAngle - state.raw;
-
-            if (delta < -180) {
-                state.offset += 360;
-            } else if (delta > 180) {
-                state.offset -= 360;
-            }
-
-            state.raw = rawAngle;
-            return rawAngle + state.offset;
-        }
-
         var isRunning = false;
-        var animationFrameId = null;
+        var maintenanceTimerId = null;
+        var handAnimationInitialized = false;
+        var lastObservedClockMs = null;
         var lastColorUpdateKey = -1;
         var lastDigitalMinuteKey = -1;
 
-        function tick() {
+        function setHandTransform(hand, angle) {
+            var value = 'rotate(' + angle + 'deg)';
+            hand.style[transformProperty] = value;
+            hand.style.webkitTransform = value;
+        }
+
+        function setHandAnimation(hand, durationMs, delayMs, playState) {
+            hand.style.animationName = 'hand-rotate';
+            hand.style.webkitAnimationName = 'hand-rotate';
+            hand.style.animationDuration = durationMs + 'ms';
+            hand.style.webkitAnimationDuration = durationMs + 'ms';
+            hand.style.animationTimingFunction = 'linear';
+            hand.style.webkitAnimationTimingFunction = 'linear';
+            hand.style.animationIterationCount = 'infinite';
+            hand.style.webkitAnimationIterationCount = 'infinite';
+            hand.style.animationDelay = delayMs + 'ms';
+            hand.style.webkitAnimationDelay = delayMs + 'ms';
+            hand.style.animationFillMode = 'both';
+            hand.style.webkitAnimationFillMode = 'both';
+            hand.style.animationPlayState = playState;
+            hand.style.webkitAnimationPlayState = playState;
+        }
+
+        function restartHandAnimation(hand) {
+            hand.style.animationName = 'none';
+            hand.style.webkitAnimationName = 'none';
+            void hand.offsetWidth;
+            hand.style.animationName = 'hand-rotate';
+            hand.style.webkitAnimationName = 'hand-rotate';
+        }
+
+        function pauseHandAnimations() {
+            secondHand.style.animationPlayState = 'paused';
+            secondHand.style.webkitAnimationPlayState = 'paused';
+            minuteHand.style.animationPlayState = 'paused';
+            minuteHand.style.webkitAnimationPlayState = 'paused';
+            hourHand.style.animationPlayState = 'paused';
+            hourHand.style.webkitAnimationPlayState = 'paused';
+        }
+
+        function clearHandAnimations() {
+            secondHand.style.animationName = 'none';
+            secondHand.style.webkitAnimationName = 'none';
+            minuteHand.style.animationName = 'none';
+            minuteHand.style.webkitAnimationName = 'none';
+            hourHand.style.animationName = 'none';
+            hourHand.style.webkitAnimationName = 'none';
+            pauseHandAnimations();
+            handAnimationInitialized = false;
+        }
+
+        function syncHandPositions(now, forceResync) {
+            var ms = now.getMilliseconds();
+            var seconds = now.getSeconds();
+            var minutes = now.getMinutes();
+            var hours = now.getHours();
+
+            var sAngle = (seconds + ms / 1000) * 6;
+            var mAngle = (minutes + seconds / 60 + ms / 60000) * 6;
+            var hAngle = ((hours % 12) + minutes / 60 + seconds / 3600 + ms / 3600000) * 30;
+
+            if (!handAnimationEnabled) {
+                setHandTransform(secondHand, sAngle);
+                setHandTransform(minuteHand, mAngle);
+                setHandTransform(hourHand, hAngle);
+                clearHandAnimations();
+                return;
+            }
+
+            if (!forceResync && handAnimationInitialized) {
+                return;
+            }
+
+            var shouldRestart = forceResync || !handAnimationInitialized;
+            var secondDelayMs = -((seconds * 1000) + ms);
+            var minuteDelayMs = -((minutes * 60000) + (seconds * 1000) + ms);
+            var hourDelayMs = -(((hours % 12) * 3600000) + (minutes * 60000) + (seconds * 1000) + ms);
+            var playState = isRunning ? 'running' : 'paused';
+
+            if (shouldRestart) {
+                restartHandAnimation(secondHand);
+                restartHandAnimation(minuteHand);
+                restartHandAnimation(hourHand);
+            }
+
+            setHandAnimation(secondHand, 60000, secondDelayMs, playState);
+            setHandAnimation(minuteHand, 3600000, minuteDelayMs, playState);
+            setHandAnimation(hourHand, 43200000, hourDelayMs, playState);
+
+            handAnimationInitialized = true;
+        }
+
+        function performMaintenance(forceHandResync) {
             if (!isRunning) return;
 
             try {
                 var now = timeProvider();
-                var ms = now.getMilliseconds();
-                var seconds = now.getSeconds();
                 var minutes = now.getMinutes();
                 var hours = now.getHours();
+                var seconds = now.getSeconds();
+                var shouldForceHandResync = !!forceHandResync;
 
-                // Smooth continuous calculations
-                var sAngle = (seconds + ms / 1000) * 6;
-                var mAngle = (minutes + seconds / 60 + ms / 60000) * 6;
-                var hAngle = ((hours % 12) + minutes / 60 + seconds / 3600) * 30;
+                if (handAnimationEnabled && handAnimationInitialized && !shouldForceHandResync) {
+                    var nowClockMs = now.getTime();
+                    if (lastObservedClockMs !== null) {
+                        var elapsedClockMs = nowClockMs - lastObservedClockMs;
+                        if (elapsedClockMs < 0 || elapsedClockMs > (maintenanceIntervalMs + driftJumpThresholdMs)) {
+                            shouldForceHandResync = true;
+                        }
+                    }
+                    lastObservedClockMs = nowClockMs;
+                } else {
+                    lastObservedClockMs = now.getTime();
+                }
 
-                var sContinuous = getContinuousAngle(sAngle, handAngleState.second);
-                var mContinuous = getContinuousAngle(mAngle, handAngleState.minute);
-                var hContinuous = getContinuousAngle(hAngle, handAngleState.hour);
-
-                // Apply transformations
-                secondHand.style[transformProperty] = 'rotate(' + sContinuous + 'deg)';
-                minuteHand.style[transformProperty] = 'rotate(' + mContinuous + 'deg)';
-                hourHand.style[transformProperty] = 'rotate(' + hContinuous + 'deg)';
+                syncHandPositions(now, shouldForceHandResync);
 
                 // Update digital info only when minute changes
                 var minuteKey = (now.getDate() * 1440) + (hours * 60) + minutes;
@@ -165,15 +239,7 @@
                 }
                 
             } catch (e) {
-                console.error("Error in tick:", e);
-            }
-
-            if (window.requestAnimationFrame) {
-                animationFrameId = window.requestAnimationFrame(tick);
-            } else if (window.webkitRequestAnimationFrame) {
-                animationFrameId = window.webkitRequestAnimationFrame(tick);
-            } else {
-                animationFrameId = window.setTimeout(tick, 1000/60);
+                console.error("Error in maintenance tick:", e);
             }
         }
 
@@ -182,27 +248,33 @@
                 if (!isRunning) {
                     isRunning = true;
                     console.log("Starting clock...");
-                    tick();
+                    performMaintenance(true);
+                    maintenanceTimerId = window.setInterval(function() {
+                        performMaintenance(false);
+                    }, maintenanceIntervalMs);
                 }
             },
             stop: function() {
                 isRunning = false;
-                if (animationFrameId) {
-                    if (window.cancelAnimationFrame) {
-                        window.cancelAnimationFrame(animationFrameId);
-                    } else if (window.webkitCancelAnimationFrame) {
-                        window.webkitCancelAnimationFrame(animationFrameId);
-                    } else {
-                        window.clearTimeout(animationFrameId);
-                    }
+                if (maintenanceTimerId) {
+                    window.clearInterval(maintenanceTimerId);
+                    maintenanceTimerId = null;
                 }
+                pauseHandAnimations();
             },
             updateNow: function() {
                 // Force an immediate update
                 var prevIsRunning = isRunning;
                 isRunning = true;
-                tick();
-                if (!prevIsRunning) this.stop();
+                performMaintenance(true);
+                if (!prevIsRunning) {
+                    isRunning = false;
+                    pauseHandAnimations();
+                }
+            },
+            setAnimatedHands: function(enabled) {
+                handAnimationEnabled = !!enabled;
+                performMaintenance(true);
             }
         };
     }

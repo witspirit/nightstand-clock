@@ -109,11 +109,14 @@ document.addEventListener('DOMContentLoaded', function() {
         timeProvider: timeProvider
     });
 
+    clock.setAnimatedHands(!useMock);
+
     clock.start();
 
     // Event Listeners
     modeSelect.addEventListener('change', function() {
         useMock = (this.value === 'mock');
+        clock.setAnimatedHands(!useMock);
         if (useMock) {
             mockTimeGroup.style.display = 'flex';
             syncMockInputWithDate();
