@@ -4,11 +4,46 @@ document.addEventListener('DOMContentLoaded', function() {
     var mockTimeGroup = document.getElementById('mock-time-group');
     var sizeSlider = document.getElementById('size-slider');
     var clockWrapper = document.getElementById('clock-wrapper');
+    var resyncIndicator = document.getElementById('resync-indicator');
 
     var useMock = false;
     var mockDate = new Date();
     var pendingArrowDirection = 0;
     var pendingArrowBaseValue = null;
+
+    var resyncReasonLabels = {
+        start: 'Clock start',
+        'manual-update': 'Manual updateNow()',
+        'animation-mode-changed': 'Animation mode changed',
+        'clock-jump-forward': 'Clock jumped forward',
+        'clock-moved-backward': 'Clock moved backward',
+        forced: 'Forced resync',
+        unspecified: 'Unspecified'
+    };
+
+    function updateResyncIndicator(payload) {
+        if (!resyncIndicator) {
+            return;
+        }
+
+        if (!payload) {
+            resyncIndicator.textContent = 'No resync yet';
+            return;
+        }
+
+        var reason = payload.reason || 'unspecified';
+        var label = resyncReasonLabels[reason] || reason;
+        var stamp = new Date(payload.timestamp || Date.now());
+        var hh = toTwoDigits(stamp.getHours());
+        var mm = toTwoDigits(stamp.getMinutes());
+        var ss = toTwoDigits(stamp.getSeconds());
+        var ms = String(stamp.getMilliseconds());
+        while (ms.length < 3) {
+            ms = '0' + ms;
+        }
+
+        resyncIndicator.textContent = label + ' @ ' + hh + ':' + mm + ':' + ss + '.' + ms;
+    }
 
     function toTwoDigits(value) {
         return value < 10 ? '0' + value : String(value);
@@ -106,7 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize clock
     var clock = window.initNightstandClock('clock-container', {
-        timeProvider: timeProvider
+        timeProvider: timeProvider,
+        onHandResync: updateResyncIndicator
     });
 
     clock.setAnimatedHands(!useMock);

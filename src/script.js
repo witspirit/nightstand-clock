@@ -4,6 +4,7 @@
     function initNightstandClock(containerId, options) {
         options = options || {};
         var timeProvider = options.timeProvider || function() { return new Date(); };
+        var onHandResync = (typeof options.onHandResync === 'function') ? options.onHandResync : null;
         
         var container = document.getElementById(containerId);
         if (!container) {
@@ -157,7 +158,21 @@
             handAnimationInitialized = false;
         }
 
-        function syncHandPositions(now, forceResync) {
+        function notifyHandResync(reason, now) {
+            if (!onHandResync) return;
+            try {
+                var stamp = now ? now.getTime() : Date.now();
+                onHandResync({
+                    reason: reason || 'unspecified',
+                    timestamp: stamp,
+                    iso: new Date(stamp).toISOString()
+                });
+            } catch (notifyErr) {
+                console.error("Error in hand resync callback:", notifyErr);
+            }
+        }
+
+        function syncHandPositions(now, forceResync, resyncReason) {
             var ms = now.getMilliseconds();
             var seconds = now.getSeconds();
             var minutes = now.getMinutes();
@@ -196,9 +211,10 @@
             setHandAnimation(hourHand, 43200000, hourDelayMs, playState);
 
             handAnimationInitialized = true;
+            notifyHandResync(resyncReason || 'forced', now);
         }
 
-        function performMaintenance(forceHandResync) {
+        function performMaintenance(forceHandResync, forceReason) {
             if (!isRunning) return;
 
             try {
@@ -207,6 +223,7 @@
                 var hours = now.getHours();
                 var seconds = now.getSeconds();
                 var shouldForceHandResync = !!forceHandResync;
+                var resyncReason = forceReason || (shouldForceHandResync ? 'forced' : null);
 
                 if (handAnimationEnabled && handAnimationInitialized && !shouldForceHandResync) {
                     var nowClockMs = now.getTime();
@@ -214,6 +231,7 @@
                         var elapsedClockMs = nowClockMs - lastObservedClockMs;
                         if (elapsedClockMs < 0 || elapsedClockMs > (maintenanceIntervalMs + driftJumpThresholdMs)) {
                             shouldForceHandResync = true;
+                            resyncReason = (elapsedClockMs < 0) ? 'clock-moved-backward' : 'clock-jump-forward';
                         }
                     }
                     lastObservedClockMs = nowClockMs;
@@ -221,7 +239,7 @@
                     lastObservedClockMs = now.getTime();
                 }
 
-                syncHandPositions(now, shouldForceHandResync);
+                syncHandPositions(now, shouldForceHandResync, resyncReason);
 
                 // Update digital info only when minute changes
                 var minuteKey = (now.getDate() * 1440) + (hours * 60) + minutes;
@@ -248,9 +266,9 @@
                 if (!isRunning) {
                     isRunning = true;
                     console.log("Starting clock...");
-                    performMaintenance(true);
+                    performMaintenance(true, 'start');
                     maintenanceTimerId = window.setInterval(function() {
-                        performMaintenance(false);
+                        performMaintenance(false, null);
                     }, maintenanceIntervalMs);
                 }
             },
@@ -266,7 +284,7 @@
                 // Force an immediate update
                 var prevIsRunning = isRunning;
                 isRunning = true;
-                performMaintenance(true);
+                performMaintenance(true, 'manual-update');
                 if (!prevIsRunning) {
                     isRunning = false;
                     pauseHandAnimations();
@@ -274,7 +292,7 @@
             },
             setAnimatedHands: function(enabled) {
                 handAnimationEnabled = !!enabled;
-                performMaintenance(true);
+                performMaintenance(true, 'animation-mode-changed');
             }
         };
     }
