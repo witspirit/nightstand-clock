@@ -55,10 +55,18 @@
             min-height: 400px;
             transition: all 0.3s ease;
             position: relative;
+            overflow: hidden;
         }
         /* Override body background behavior for the wrapper instead */
         body { background-color: #222 !important; }
-        #clock-wrapper { background-color: var(--bg-color, #000); transition: background-color 1s linear; width: 100%; height: 100vh; }
+        #clock-wrapper { background-color: var(--bg-color, #000); transition: background-color 1s linear; }
+        #clock-wrapper #clock-container {
+            width: 100vmin;
+            height: 100vmin;
+            transform: scale(var(--clock-scale, 1));
+            transform-origin: center center;
+            transition: transform 0.15s linear;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +86,7 @@
         </div>
 
         <div class="control-group">
-            <label for="size-slider">Container Size</label>
+            <label for="size-slider">Clock Scale</label>
             <input type="range" id="size-slider" min="30" max="100" value="100">
         </div>
 

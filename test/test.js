@@ -212,8 +212,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     sizeSlider.addEventListener('input', function() {
-        var size = this.value;
-        clockWrapper.style.width = size + '%';
-        clockWrapper.style.height = size + 'vh';
+        var size = parseInt(this.value, 10) || 100;
+        var clamped = Math.max(1, Math.min(size, 100));
+        var scale = clamped / 100;
+        clockWrapper.style.setProperty('--clock-scale', String(scale));
     });
 });
