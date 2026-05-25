@@ -47,12 +47,158 @@
             line-height: 1.3;
             white-space: nowrap;
         }
+        #palette-panel {
+            width: min(420px, 42vw);
+            min-width: 320px;
+            max-height: calc(100vh - 140px);
+            overflow: auto;
+            padding: 12px 14px 16px;
+            background: #2a2a2a;
+            color: #f0f0f0;
+            border-left: 1px solid #444;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        #palette-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        #palette-preset {
+            min-width: 170px;
+            font-size: 13px;
+            padding: 6px 8px;
+        }
+        #palette-title {
+            font-size: 14px;
+            color: #cfcfcf;
+        }
+        #palette-strip {
+            position: relative;
+            width: 100%;
+            height: 28px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #555;
+        }
+        .palette-stop-line {
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        #palette-marker {
+            position: absolute;
+            top: -2px;
+            width: 2px;
+            height: 32px;
+            background: #fff;
+            box-shadow: 0 0 0 1px #000;
+            transform: translateX(-1px);
+        }
+        #palette-labels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 14px;
+            font-family: Menlo, Monaco, Consolas, monospace;
+            font-size: 11px;
+            color: #d8d8d8;
+        }
+        .palette-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .palette-swatch {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            flex-shrink: 0;
+        }
+        #palette-editor {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 4px;
+        }
+        .palette-editor-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            padding: 6px;
+            border-radius: 6px;
+            background: #242424;
+        }
+        .palette-editor-row input[type="number"] {
+            width: 64px;
+            padding: 4px 6px;
+            font-size: 13px;
+        }
+        .palette-editor-row input[type="text"] {
+            width: 96px;
+            padding: 4px 6px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        .palette-editor-row input[type="color"] {
+            width: 28px;
+            height: 28px;
+            border: none;
+            padding: 0;
+            background: transparent;
+        }
+        .palette-editor-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 2px;
+        }
+        #palette-editor-status {
+            min-height: 18px;
+            font-size: 12px;
+            color: #c9d8ff;
+        }
+        .palette-action-btn {
+            padding: 6px 10px;
+            font-size: 13px;
+            border: 1px solid #5d5d5d;
+            border-radius: 4px;
+            background: #3a3a3a;
+            color: #fff;
+            cursor: pointer;
+        }
+        .palette-action-btn:hover {
+            background: #454545;
+        }
+        #palette-json {
+            width: 100%;
+            min-height: 84px;
+            resize: vertical;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background: #1f1f1f;
+            color: #eaeaea;
+            font-family: Menlo, Monaco, Consolas, monospace;
+            font-size: 12px;
+            padding: 8px;
+        }
+        #test-main {
+            flex: 1;
+            display: flex;
+            min-height: 0;
+        }
         #clock-wrapper {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 400px;
+            min-height: 380px;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -66,6 +212,21 @@
             transform: scale(var(--clock-scale, 1));
             transform-origin: center center;
             transition: transform 0.15s linear;
+        }
+        @media (max-width: 1100px) {
+            #test-main {
+                flex-direction: column;
+            }
+            #palette-panel {
+                width: 100%;
+                min-width: 0;
+                max-height: none;
+                border-left: none;
+                border-top: 1px solid #444;
+            }
+            #clock-wrapper {
+                min-height: 55vh;
+            }
         }
     </style>
 </head>
@@ -96,19 +257,43 @@
         </div>
     </div>
 
-    <div id="clock-wrapper">
-        <div id="clock-container">
-            <div id="clock-face">
-                <div id="ticks"></div>
-                <div id="digital-container">
-                    <div id="digital-time">--:--</div>
-                    <div id="digital-date">--</div>
+    <div id="test-main">
+        <div id="clock-wrapper">
+            <div id="clock-container">
+                <div id="clock-face">
+                    <div id="ticks"></div>
+                    <div id="digital-container">
+                        <div id="digital-time">--:--</div>
+                        <div id="digital-date">--</div>
+                    </div>
+                    <div id="hour-hand" class="hand"></div>
+                    <div id="minute-hand" class="hand"></div>
+                    <div id="second-hand" class="hand"></div>
+                    <div id="center-dot"></div>
                 </div>
-                <div id="hour-hand" class="hand"></div>
-                <div id="minute-hand" class="hand"></div>
-                <div id="second-hand" class="hand"></div>
-                <div id="center-dot"></div>
             </div>
+        </div>
+
+        <div id="palette-panel">
+            <div id="palette-title">Background Palette Timeline</div>
+            <div id="palette-toolbar">
+                <select id="palette-preset"></select>
+                <button type="button" id="palette-apply-preset" class="palette-action-btn">Apply Preset</button>
+                <button type="button" id="palette-add-stop" class="palette-action-btn">Add Stop</button>
+            </div>
+            <div id="palette-strip" aria-hidden="true">
+                <div id="palette-marker"></div>
+            </div>
+            <div id="palette-labels"></div>
+            <div id="palette-editor"></div>
+            <div class="palette-editor-actions">
+                <button type="button" id="palette-apply" class="palette-action-btn">Apply Palette</button>
+                <button type="button" id="palette-reset" class="palette-action-btn">Reset Default</button>
+                <button type="button" id="palette-export" class="palette-action-btn">Export JSON</button>
+                <button type="button" id="palette-import" class="palette-action-btn">Import JSON</button>
+            </div>
+            <textarea id="palette-json" placeholder='Paste or copy color stops JSON here. Example: [[0,[10,10,30]],[6,[80,50,60]],[24,[10,10,30]]]'></textarea>
+            <div id="palette-editor-status" aria-live="polite"></div>
         </div>
     </div>
 

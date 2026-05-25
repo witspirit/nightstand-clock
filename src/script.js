@@ -5,6 +5,53 @@
         options = options || {};
         var timeProvider = options.timeProvider || function() { return new Date(); };
         var onHandResync = (typeof options.onHandResync === 'function') ? options.onHandResync : null;
+
+        function cloneColorStops(stops) {
+            var cloned = [];
+            for (var i = 0; i < stops.length; i++) {
+                cloned.push([stops[i][0], [stops[i][1][0], stops[i][1][1], stops[i][1][2]]]);
+            }
+            return cloned;
+        }
+
+        function normalizeColorStops(stops) {
+            if (!hasValidColorStops(stops)) {
+                return null;
+            }
+
+            var normalized = [];
+            for (var i = 0; i < stops.length; i++) {
+                var hour = Math.max(0, Math.min(24, Number(stops[i][0])));
+                var color = stops[i][1];
+                normalized.push([
+                    hour,
+                    [
+                        Math.max(0, Math.min(255, Math.round(Number(color[0])))),
+                        Math.max(0, Math.min(255, Math.round(Number(color[1])))),
+                        Math.max(0, Math.min(255, Math.round(Number(color[2]))))
+                    ]
+                ]);
+            }
+
+            normalized.sort(function(a, b) {
+                return a[0] - b[0];
+            });
+
+            return normalized;
+        }
+
+        function hasValidColorStops(stops) {
+            if (!stops || !stops.length || stops.length < 2) {
+                return false;
+            }
+            for (var i = 0; i < stops.length; i++) {
+                var stop = stops[i];
+                if (!stop || typeof stop[0] !== 'number' || !stop[1] || stop[1].length !== 3) {
+                    return false;
+                }
+            }
+            return true;
+        }
         
         var container = document.getElementById(containerId);
         if (!container) {
@@ -42,7 +89,7 @@
         var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-        var colorStops = [
+        var defaultColorStops = [
             [0, [10, 10, 30]],    // Midnight
             [4, [15, 15, 40]],    // Deep night
             [6, [80, 50, 60]],    // Sunrise
@@ -53,6 +100,7 @@
             [20, [40, 30, 60]],   // Evening
             [24, [10, 10, 30]]    // Midnight
         ];
+        var colorStops = normalizeColorStops(options.colorStops) || cloneColorStops(defaultColorStops);
 
         function interpolateColor(color1, color2, factor) {
             var result = [];
@@ -261,6 +309,30 @@
             }
         }
 
+        function applyColorStops(nextStops) {
+            var normalized = normalizeColorStops(nextStops);
+            if (!normalized) {
+                return false;
+            }
+
+            colorStops = normalized;
+            lastColorUpdateKey = -1;
+
+            if (isRunning) {
+                performMaintenance(true, 'palette-changed');
+            } else {
+                var prevIsRunning = isRunning;
+                isRunning = true;
+                performMaintenance(true, 'palette-changed');
+                if (!prevIsRunning) {
+                    isRunning = false;
+                    pauseHandAnimations();
+                }
+            }
+
+            return true;
+        }
+
         return {
             start: function() {
                 if (!isRunning) {
@@ -293,6 +365,18 @@
             setAnimatedHands: function(enabled) {
                 handAnimationEnabled = !!enabled;
                 performMaintenance(true, 'animation-mode-changed');
+            },
+            getColorStops: function() {
+                return cloneColorStops(colorStops);
+            },
+            getDefaultColorStops: function() {
+                return cloneColorStops(defaultColorStops);
+            },
+            setColorStops: function(nextStops) {
+                return applyColorStops(nextStops);
+            },
+            resetColorStops: function() {
+                return applyColorStops(defaultColorStops);
             }
         };
     }
