@@ -2,7 +2,7 @@
   "scanners": [
     {
       "id": "javascript",
-      "source": "@groma/scanner-javascript@0.2.2",
+      "source": "@groma/scanner-javascript@0.2.3",
       "include": [
         "**/*.js",
         "**/*.mjs",
