@@ -4,6 +4,7 @@ title: Experiment with subtle still Earth backdrop compositions
 status: To Do
 assignee: []
 created_date: '2026-11-01T19:45:00Z'
+updated_date: '2026-11-01T20:11:00Z'
 labels:
   - earth-backdrop
 dependencies:
@@ -13,6 +14,9 @@ references:
   - test/test.js
   - src/index.html
   - src/style.css
+  - docs/earth-backdrop-feasibility.md
+documentation:
+  - docs/earth-backdrop-feasibility.md
 parent_task_id: TASK-2
 type: spike
 ordinal: 4000
@@ -32,3 +36,16 @@ A globe that looks attractive on its own may compete with hands, tick marks, and
 - [ ] #4 Document visual comparisons of hand, tick, time, and date readability, globe prominence, and night brightness; capture representative previews without treating desktop review as iPad validation.
 - [ ] #5 No motion, live data service, or production changes are required to review the compositions.
 <!-- AC:END -->
+
+## Comments
+
+<!-- COMMENTS:BEGIN -->
+author: @codex
+created: 2026-11-01T20:11:00Z
+
+---
+
+Before planning or executing this work, read docs/earth-backdrop-feasibility.md from TASK-2.1. It provides rendering comparisons, imagery attribution guidance, experiment recommendations, and the baseline comparison protocol. Device-specific findings remain pending; confirm the current implementation against source and docs/current-state.md.
+
+---
+<!-- COMMENTS:END -->

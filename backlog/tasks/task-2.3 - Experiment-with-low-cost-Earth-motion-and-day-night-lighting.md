@@ -4,6 +4,7 @@ title: Experiment with low-cost Earth motion and day/night lighting
 status: To Do
 assignee: []
 created_date: '2026-11-01T19:45:00Z'
+updated_date: '2026-11-01T20:11:00Z'
 labels:
   - earth-backdrop
 dependencies:
@@ -11,6 +12,9 @@ dependencies:
 references:
   - test/index.html
   - src/script.js
+  - docs/earth-backdrop-feasibility.md
+documentation:
+  - docs/earth-backdrop-feasibility.md
 parent_task_id: TASK-2
 type: spike
 ordinal: 5000
@@ -30,3 +34,16 @@ Motion or a day/night boundary may add the appeal of Living Earth, but either co
 - [ ] #4 Record asset download size, update cadence, startup behavior, and observed effect on clock animation for each implemented option, distinguishing desktop evidence from device evidence.
 - [ ] #5 Unsupported rendering features or unavailable assets leave a usable still or plain-background fallback; no production integration or live cloud/weather dependency is introduced.
 <!-- AC:END -->
+
+## Comments
+
+<!-- COMMENTS:BEGIN -->
+author: @codex
+created: 2026-11-01T20:11:00Z
+
+---
+
+Before planning or executing this work, read docs/earth-backdrop-feasibility.md from TASK-2.1. It provides rendering comparisons, imagery attribution guidance, experiment recommendations, and the baseline comparison protocol. Device-specific findings remain pending; confirm the current implementation against source and docs/current-state.md.
+
+---
+<!-- COMMENTS:END -->

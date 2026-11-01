@@ -4,6 +4,7 @@ title: Evaluate Earth experiments on iPad 2 and review the integration decision
 status: To Do
 assignee: []
 created_date: '2026-11-01T19:46:00Z'
+updated_date: '2026-11-01T20:11:00Z'
 labels:
   - earth-backdrop
 dependencies:
@@ -13,6 +14,9 @@ references:
   - docs/ipad2_observations.md
   - docs/hosting.md
   - test/index.html
+  - docs/earth-backdrop-feasibility.md
+documentation:
+  - docs/earth-backdrop-feasibility.md
 parent_task_id: TASK-2
 type: spike
 ordinal: 6000
@@ -32,3 +36,16 @@ Desktop appearance and nominal browser support cannot establish suitability for 
 - [ ] #4 Present the results for the user's explicit proceed/revise/stop decision and record their response when received; passing technical checks alone does not approve integration.
 - [ ] #5 Only after explicit user approval, create a separate integration task referencing the chosen experiment, its settings, fallback behavior, and validation requirements. Without approval, src/ and deployment remain unchanged.
 <!-- AC:END -->
+
+## Comments
+
+<!-- COMMENTS:BEGIN -->
+author: @codex
+created: 2026-11-01T20:11:00Z
+
+---
+
+Before planning or executing this work, read docs/earth-backdrop-feasibility.md from TASK-2.1. It provides rendering comparisons, imagery attribution guidance, experiment recommendations, and the baseline comparison protocol. Device-specific findings remain pending; confirm the current implementation against source and docs/current-state.md.
+
+---
+<!-- COMMENTS:END -->
