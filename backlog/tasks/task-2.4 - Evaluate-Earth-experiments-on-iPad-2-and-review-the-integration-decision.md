@@ -1,0 +1,34 @@
+---
+id: TASK-2.4
+title: Evaluate Earth experiments on iPad 2 and review the integration decision
+status: To Do
+assignee: []
+created_date: '2026-11-01T19:46:00Z'
+labels:
+  - earth-backdrop
+dependencies:
+  - TASK-2.2
+  - TASK-2.3
+references:
+  - docs/ipad2_observations.md
+  - docs/hosting.md
+  - test/index.html
+parent_task_id: TASK-2
+type: spike
+ordinal: 6000
+---
+
+## Description
+
+<!-- SECTION:DESCRIPTION:BEGIN -->
+Desktop appearance and nominal browser support cannot establish suitability for an old nightstand iPad. Compare the experiments on the actual target browser and let the user decide whether any result deserves integration. If no variant is satisfactory, retaining the existing background is a successful decision. This task authorizes evaluation and review, not integration or deployment.
+<!-- SECTION:DESCRIPTION:END -->
+
+## Acceptance Criteria
+<!-- AC:BEGIN -->
+- [ ] #1 Record reproducible on-device comparisons of the clock-only baseline, still Earth, and viable animated variants, including device/browser version, chosen settings, load time, clock-hand smoothness, control responsiveness, and stability during a timed run of at least 30 minutes.
+- [ ] #2 Review portrait and landscape layouts, low-brightness nighttime readability, and behavior after backgrounding and resuming the browser; report failures and limitations.
+- [ ] #3 Provide a concise comparison with recommended variant and settings, measured results where available, subjective observations clearly labeled, and unresolved risks. If the iPad is unavailable, device acceptance stays pending rather than being inferred from desktop tests.
+- [ ] #4 Present the results for the user's explicit proceed/revise/stop decision and record their response when received; passing technical checks alone does not approve integration.
+- [ ] #5 Only after explicit user approval, create a separate integration task referencing the chosen experiment, its settings, fallback behavior, and validation requirements. Without approval, src/ and deployment remain unchanged.
+<!-- AC:END -->
