@@ -4,17 +4,19 @@ title: Evaluate Earth experiments on iPad 2 and review the integration decision
 status: To Do
 assignee: []
 created_date: '2026-11-01T19:46:00Z'
-updated_date: '2026-11-01T20:11:00Z'
+updated_date: '2026-11-03T15:50:00Z'
 labels:
   - earth-backdrop
 dependencies:
   - TASK-2.2
   - TASK-2.3
+  - TASK-2.5
 references:
   - docs/ipad2_observations.md
   - docs/hosting.md
   - test/index.html
   - docs/earth-backdrop-feasibility.md
+  - TASK-2.5
 documentation:
   - docs/earth-backdrop-feasibility.md
 parent_task_id: TASK-2
@@ -46,6 +48,24 @@ created: 2026-11-01T20:11:00Z
 ---
 
 Before planning or executing this work, read docs/earth-backdrop-feasibility.md from TASK-2.1. It provides rendering comparisons, imagery attribution guidance, experiment recommendations, and the baseline comparison protocol. Device-specific findings remain pending; confirm the current implementation against source and docs/current-state.md.
+
+---
+
+author: @codex
+created: 2026-11-03T15:42:00Z
+
+---
+
+User preference changed after TASK-2.3: evaluate a stationary location-centered day/night backdrop rather than treating globe rotation as the desired candidate. The next prototype should use time/date-based geographical illumination with distinct day/night imagery, retaining still/off fallbacks and old-iPad cost evidence. Current TASK-2.3 lighting remains illustrative and does not satisfy this new direction. Exact center location is pending. Clouds/extra data layers are deferred. Preserve the production integration approval boundary.
+
+---
+
+author: @codex
+created: 2026-11-03T15:50:00Z
+
+---
+
+TASK-2.5 now captures the revised stationary Brasschaat-centered day/night experiment and should complete before device evaluation. Brasschaat is confirmed; HTTPS hosting and device geolocation are deferred, as are clouds and other live layers.
 
 ---
 <!-- COMMENTS:END -->
