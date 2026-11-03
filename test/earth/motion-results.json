@@ -1,0 +1,2609 @@
+{
+  "date": "2026-11-03T15:20:28.183Z",
+  "browser": "156.0.8078.4",
+  "environment": "Linux headless Chromium, DPR 1, 1024 \u00d7 768; desktop evidence only",
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+  "checks": "PASS",
+  "loads": [
+    {
+      "name": "off",
+      "cache": "cold",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 0,
+        "clockInitializedMs": 3,
+        "firstEarthLoadedMs": null,
+        "lastImageLoadMs": null,
+        "failure": ""
+      },
+      "navigationMs": 39.89999999990687,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 2.1000000000931323
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 2.7000000001862645
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 3.2000000001862645
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 3.1000000000931323
+        }
+      ]
+    },
+    {
+      "name": "off",
+      "cache": "cold",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 0,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": null,
+        "lastImageLoadMs": null,
+        "failure": ""
+      },
+      "navigationMs": 32.5,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.2999999998137355
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 1.3999999999068677
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2.3999999999068677
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2.3999999999068677
+        }
+      ]
+    },
+    {
+      "name": "off",
+      "cache": "cold",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 0,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": null,
+        "lastImageLoadMs": null,
+        "failure": ""
+      },
+      "navigationMs": 35.700000000186265,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.7999999998137355
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 1.7000000001862645
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 1.6000000000931323
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 1.7000000001862645
+        }
+      ]
+    },
+    {
+      "name": "off",
+      "cache": "warm",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 0,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": null,
+        "lastImageLoadMs": null,
+        "failure": ""
+      },
+      "navigationMs": 27,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "off",
+      "cache": "warm",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 0,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": null,
+        "lastImageLoadMs": null,
+        "failure": ""
+      },
+      "navigationMs": 27.90000000037253,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "off",
+      "cache": "warm",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 0,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": null,
+        "lastImageLoadMs": null,
+        "failure": ""
+      },
+      "navigationMs": 27.399999999906868,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "original",
+      "cache": "cold",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 3,
+        "firstEarthLoadedMs": 6,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 38.60000000009313,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.2000000001862645
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 1.5
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 1.8000000002793968
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 76505,
+          "durationMs": 1.2999999998137355
+        }
+      ]
+    },
+    {
+      "name": "original",
+      "cache": "cold",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 36.10000000009313,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.6999999997206032
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 2.1000000000931323
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2.2000000001862645
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2.3000000002793968
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 76505,
+          "durationMs": 1.5
+        }
+      ]
+    },
+    {
+      "name": "original",
+      "cache": "cold",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 4,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 40.59999999962747,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.8000000002793968
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 1.8000000002793968
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 1.8999999999068677
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 1.6000000000931323
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 76505,
+          "durationMs": 1.6000000000931323
+        }
+      ]
+    },
+    {
+      "name": "original",
+      "cache": "warm",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 28.699999999720603,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "original",
+      "cache": "warm",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 30.899999999906868,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "original",
+      "cache": "warm",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 33.1999999997206,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "original-lit",
+      "cache": "cold",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 6,
+        "firstEarthLoadedMs": 11,
+        "lastImageLoadMs": 4,
+        "failure": ""
+      },
+      "navigationMs": 50.700000000186265,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.8999999999068677
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 2.2000000001862645
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2.3999999999068677
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2.2999999998137355
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 76505,
+          "durationMs": 2.099999999627471
+        }
+      ]
+    },
+    {
+      "name": "original-lit",
+      "cache": "cold",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 36.5,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.400000000372529
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 1.7000000001862645
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2.2000000001862645
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 76505,
+          "durationMs": 1.400000000372529
+        }
+      ]
+    },
+    {
+      "name": "original-lit",
+      "cache": "cold",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 36.299999999813735,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.3000000002793968
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 1.8999999999068677
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2.2999999998137355
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2.2999999998137355
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 76505,
+          "durationMs": 1.3000000002793968
+        }
+      ]
+    },
+    {
+      "name": "original-lit",
+      "cache": "warm",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 29.300000000279397,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "original-lit",
+      "cache": "warm",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 28.199999999720603,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "original-lit",
+      "cache": "warm",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 4,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 29,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "assets/blue-marble-512.jpg",
+          "encodedBytes": 76205,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "stationary-frame",
+      "cache": "cold",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 3,
+        "firstEarthLoadedMs": 6,
+        "lastImageLoadMs": 3,
+        "failure": ""
+      },
+      "navigationMs": 45.799999999813735,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.8999999999068677
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 2.3999999999068677
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2.7999999998137355
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2.6999999997206032
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 22036,
+          "durationMs": 1.5
+        }
+      ]
+    },
+    {
+      "name": "stationary-frame",
+      "cache": "cold",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 48,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 2
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 2.2999999998137355
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2.400000000372529
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2.400000000372529
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 22036,
+          "durationMs": 1.6000000000931323
+        }
+      ]
+    },
+    {
+      "name": "stationary-frame",
+      "cache": "cold",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 4,
+        "lastImageLoadMs": 3,
+        "failure": ""
+      },
+      "navigationMs": 31.40000000037253,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.3000000002793968
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 1.5
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 1.5
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 1.6000000000931323
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 22036,
+          "durationMs": 1.3999999999068677
+        }
+      ]
+    },
+    {
+      "name": "stationary-frame",
+      "cache": "warm",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 2,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 26.899999999906868,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "stationary-frame",
+      "cache": "warm",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 29.100000000093132,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "stationary-frame",
+      "cache": "warm",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 30,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "stepped",
+      "cache": "cold",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 4,
+        "firstEarthLoadedMs": 7,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 40.700000000186265,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.2000000001862645
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 1.7999999998137355
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 1.8999999999068677
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 22036,
+          "durationMs": 1.5
+        }
+      ]
+    },
+    {
+      "name": "stepped",
+      "cache": "cold",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 35.39999999990687,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.8000000002793968
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 1.2000000001862645
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 1.6000000000931323
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 1.5
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 22036,
+          "durationMs": 1.1999999997206032
+        }
+      ]
+    },
+    {
+      "name": "stepped",
+      "cache": "cold",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 30.699999999720603,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 0.900000000372529
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 0.8999999999068677
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 1.1000000000931323
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 1.6000000000931323
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 22036,
+          "durationMs": 0.8999999999068677
+        }
+      ]
+    },
+    {
+      "name": "stepped",
+      "cache": "warm",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 29,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "stepped",
+      "cache": "warm",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 4,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 30.700000000186265,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "stepped",
+      "cache": "warm",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 25.700000000186265,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "stepped-lit",
+      "cache": "cold",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 5,
+        "firstEarthLoadedMs": 8,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 43.5,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.599999999627471
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 2.400000000372529
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2.8999999999068677
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2.8999999999068677
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 22036,
+          "durationMs": 1.2999999998137355
+        }
+      ]
+    },
+    {
+      "name": "stepped-lit",
+      "cache": "cold",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 33.60000000009313,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 2.1000000000931323
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 2.3999999999068677
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2.6000000000931323
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2.3999999999068677
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 22036,
+          "durationMs": 1.1999999997206032
+        }
+      ]
+    },
+    {
+      "name": "stepped-lit",
+      "cache": "cold",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "navigationMs": 32.10000000009313,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 4613,
+          "durationMs": 1.5
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 1635,
+          "durationMs": 1.900000000372529
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 16105,
+          "durationMs": 2.6000000000931323
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 9130,
+          "durationMs": 2.3999999999068677
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 22036,
+          "durationMs": 1.2000000001862645
+        }
+      ]
+    },
+    {
+      "name": "stepped-lit",
+      "cache": "warm",
+      "repeat": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 26.5,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "stepped-lit",
+      "cache": "warm",
+      "repeat": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 29.800000000279397,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "stepped-lit",
+      "cache": "warm",
+      "repeat": 3,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 2,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "navigationMs": 28.399999999906868,
+      "resources": [
+        {
+          "name": "src/style.css",
+          "encodedBytes": 4313,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.css",
+          "encodedBytes": 1335,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "src/script.js",
+          "encodedBytes": 15805,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "earth/motion.js",
+          "encodedBytes": 8830,
+          "transferBytes": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "motion/view-00.jpg",
+          "encodedBytes": 21736,
+          "transferBytes": 0,
+          "durationMs": 0
+        }
+      ]
+    }
+  ],
+  "runtime": [
+    {
+      "name": "off",
+      "durationMs": 35011.00000000019,
+      "rafCallbacks": 2101,
+      "maxRafGapMs": 16.80000000000291,
+      "before": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 0,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": null,
+        "lastImageLoadMs": null,
+        "failure": ""
+      },
+      "after": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 0,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": null,
+        "lastImageLoadMs": null,
+        "failure": ""
+      },
+      "textBefore": "16:20",
+      "textAfter": "16:21",
+      "transformBefore": "matrix(-0.987517, 0.157514, -0.157514, -0.987517, 0, 0)",
+      "transformAfter": "matrix(0.9334, 0.358837, -0.358837, 0.9334, 0, 0)",
+      "animationName": "hand-rotate"
+    },
+    {
+      "name": "original",
+      "durationMs": 35006.29999999991,
+      "rafCallbacks": 2101,
+      "maxRafGapMs": 16.80000000000291,
+      "before": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "after": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 2,
+        "failure": ""
+      },
+      "textBefore": "16:21",
+      "textAfter": "16:21",
+      "transformBefore": "matrix(0.920825, 0.389976, -0.389976, 0.920825, 0, 0)",
+      "transformAfter": "matrix(-0.601182, -0.799112, 0.799112, -0.601182, 0, 0)",
+      "animationName": "hand-rotate"
+    },
+    {
+      "name": "original-lit",
+      "durationMs": 35011.39999999963,
+      "rafCallbacks": 2101,
+      "maxRafGapMs": 16.80000000000291,
+      "before": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "after": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "textBefore": "16:21",
+      "textAfter": "16:22",
+      "transformBefore": "matrix(-0.57462, -0.818421, 0.818421, -0.57462, 0, 0)",
+      "transformAfter": "matrix(0.0868289, 0.996223, -0.996223, 0.0868289, 0, 0)",
+      "animationName": "hand-rotate"
+    },
+    {
+      "name": "stationary-frame",
+      "durationMs": 35007.900000000096,
+      "rafCallbacks": 2101,
+      "maxRafGapMs": 16.80000000000291,
+      "before": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 2,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "after": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "still",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 0,
+        "timerActive": false,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 2,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "textBefore": "16:22",
+      "textAfter": "16:22",
+      "transformBefore": "matrix(0.0538418, 0.998549, -0.998549, 0.0538418, 0, 0)",
+      "transformAfter": "matrix(0.454065, -0.890968, 0.890968, 0.454065, 0, 0)",
+      "animationName": "hand-rotate"
+    },
+    {
+      "name": "stepped",
+      "durationMs": 35008.50000000037,
+      "rafCallbacks": 2101,
+      "maxRafGapMs": 16.80000000000291,
+      "before": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "after": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 1,
+        "lighting": "off",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 2,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 3,
+        "failure": ""
+      },
+      "textBefore": "16:22",
+      "textAfter": "16:23",
+      "transformBefore": "matrix(0.481882, -0.876236, 0.876236, 0.481882, 0, 0)",
+      "transformAfter": "matrix(-0.856263, 0.516539, -0.516539, -0.856263, 0, 0)",
+      "animationName": "hand-rotate"
+    },
+    {
+      "name": "stepped-lit",
+      "durationMs": 35014.70000000009,
+      "rafCallbacks": 2102,
+      "maxRafGapMs": 16.80000000000291,
+      "before": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 0,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 1,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 1,
+        "failure": ""
+      },
+      "after": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "frames",
+        "activeView": "frames",
+        "motion": "step",
+        "frame": 1,
+        "lighting": "illustrative",
+        "gradientSupported": true,
+        "appearance": "night",
+        "clock": "real",
+        "opacity": 0.28,
+        "cadenceMs": 30000,
+        "timerActive": true,
+        "loading": false,
+        "swaps": 2,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "lastImageLoadMs": 3,
+        "failure": ""
+      },
+      "textBefore": "16:23",
+      "textAfter": "16:24",
+      "transformBefore": "matrix(-0.872924, 0.487857, -0.487857, -0.872924, 0, 0)",
+      "transformAfter": "matrix(0.999879, 0.0155607, -0.0155607, 0.999879, 0, 0)",
+      "animationName": "hand-rotate"
+    }
+  ]
+}

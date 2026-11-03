@@ -1,0 +1,21 @@
+/* The existing production dial is unchanged. */
+[hidden] { display: none !important; }
+html, body { transition: none; }
+/* The shared clock stylesheet locks both roots for the standalone dial. */
+html.harness { height: auto; min-height: 100%; overflow-y: auto; }
+body.harness { display: block; height: auto; min-height: 100vh; overflow: visible; margin: 0; padding: 16px; box-sizing: border-box; background: #17191e; color: #eee; font: 16px Arial, sans-serif; }
+h1 { font-size: 24px; margin: 0; }
+p { line-height: 1.5; } a { color: #9bd6ff; }
+label { display: inline-block; margin: 8px 16px 8px 0; }
+select, button { font: inherit; padding: 8px; max-width: 100%; }
+select { display: block; margin-top: 4px; }
+#diagnostics { white-space: pre-wrap; overflow-wrap: break-word; font-size: 12px; }
+#frame-space { position: relative; margin: 12px auto; }
+iframe { display: block; border: 0; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
+#scene { width: 100%; height: 100%; }
+#earth-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+#globe { position: absolute; border-radius: 50%; overflow: hidden; display: none; }
+#earth, #shade { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+#shade { display: none; }
+#clock-container { position: relative; }
+#image-status { position: absolute; left: 8px; bottom: 4px; right: 8px; margin: 0; color: #ddd; font: 11px Arial, sans-serif; background: #000; }

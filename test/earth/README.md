@@ -1,5 +1,7 @@
 # Still Earth composition experiment — TASK-2.2
 
+For the subsequent motion and lighting study, open [the comparison page](motion.html) and read [TASK-2.3 results and instructions](MOTION.md). The still study below retains its original presets.
+
 An isolated, statically hostable visual study. All experimental files live in `test/earth/`; the preview loads the existing `src/style.css` and `src/script.js` unchanged. No production deployment or integration is included.
 
 ## Launch and controls
