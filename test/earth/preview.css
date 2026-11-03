@@ -1,0 +1,6 @@
+/* Only the experiment adds a backdrop; all dial styling comes from src/. */
+html, body { transition: none; }
+#earth-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+#earth { position: absolute; border-radius: 50%; }
+#clock-container { position: relative; }
+#image-status { position: absolute; left: 8px; bottom: 8px; font: 12px Arial, sans-serif; color: #fff; background: #000; }

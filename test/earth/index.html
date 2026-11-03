@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Still Earth comparison</title>
+<style>
+* { box-sizing: border-box; } body { margin: 0; padding: 16px; color: #eee; background: #17191e; font: 16px Arial, sans-serif; }
+h1 { font-size: 24px; margin: 0 0 8px; } p { line-height: 1.5; } a { color: #9bd6ff; }
+label { display: inline-block; margin: 6px 16px 8px 0; } select { display: block; font: inherit; padding: 8px; margin-top: 4px; max-width: 100%; }
+fieldset { border: 1px solid #626670; padding: 8px 12px; margin: 12px 0; } #frame-space { position: relative; margin: 12px auto; }
+iframe { display: block; border: 0; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
+#settings, #diagnostics { font: 14px monospace; overflow-wrap: break-word; } .notice { color: #c7ccd5; }
+</style></head><body>
+<h1>Still Earth comparison</h1><p>Compare a historical NASA globe behind the existing clock. Fixed local times; no Earth motion. <a href="README.md">Review notes and instructions</a>.</p>
+<fieldset><legend>Composition and baseline</legend>
+<label>Composition<select id="composition"><option value="off">Earth off (baseline)</option><option value="full" selected>Full globe</option><option value="offset">Offset / cropped globe</option><option value="faint">Faint upper globe</option></select></label>
+<label>Condition<select id="condition"><option value="night">Night · 02:00</option><option value="dawn">Dawn · 06:00</option><option value="day">Daytime · 12:00</option><option value="dusk">Dusk · 18:00</option><option value="evening">Late evening · 22:00</option></select></label>
+<label>Viewport<select id="viewport"><option value="landscape">Landscape · 1024 × 768</option><option value="portrait">Portrait · 768 × 1024</option></select></label>
+</fieldset>
+<fieldset><legend>Earth adjustments (composition selection restores defaults)</legend>
+<label>Opacity<select id="opacity"><option>0</option><option>4</option><option>8</option><option>12</option><option>16</option><option>20</option><option>28</option><option>40</option></select></label>
+<label>Diameter (% of shorter side)<select id="size"><option>55</option><option>75</option><option>90</option><option>115</option><option>140</option><option>170</option></select></label>
+<label>Horizontal center (%)<select id="x"><option>10</option><option>25</option><option>50</option><option>75</option><option>90</option><option>110</option></select></label>
+<label>Vertical center (%)<select id="y"><option>10</option><option>25</option><option>35</option><option>50</option><option>75</option><option>90</option></select></label>
+</fieldset>
+<p id="settings"></p><p><a id="direct" target="_blank" href="preview.html">Open preview alone at browser size</a> · <a href="../../src/" target="_blank">Untouched production baseline</a></p>
+<p class="notice">The embedded preview scales to fit this page; its internal viewport keeps the selected dimensions. Desktop rendering is not iPad validation. Standalone preview uses the browser's actual viewport.</p>
+<div id="frame-space"><iframe id="preview" title="Existing clock with still Earth backdrop" src="preview.html"></iframe></div>
+<p id="diagnostics"></p><noscript>Enable JavaScript to operate the clock and comparison controls.</noscript>
+<script src="experiment.js"></script></body></html>
