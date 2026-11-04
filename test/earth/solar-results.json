@@ -1,0 +1,2429 @@
+{
+  "environment": {
+    "date": "2026-11-04T09:16:57.329Z",
+    "browser": "156.0.8078.4",
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H"
+  },
+  "presets": [
+    {
+      "preset": "dawn",
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "dawn",
+        "realSun": false,
+        "realClock": false,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-03-20T05:50:00.000Z",
+        "sun": {
+          "declination": -0.5625825473507376,
+          "longitude": 94.56054602541178,
+          "equationMinutes": -8.242184101647005,
+          "vector": [
+            0.9999511203669867,
+            -0.005233747600258201,
+            -0.008388370691908936
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 1,
+        "lastDrawMs": 8,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 52,
+        "failure": ""
+      },
+      "centerPixels": [
+        [
+          38,
+          48,
+          14,
+          255
+        ],
+        [
+          134,
+          126,
+          113,
+          255
+        ],
+        [
+          90,
+          91,
+          68,
+          255
+        ]
+      ]
+    },
+    {
+      "preset": "day",
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          768,
+          1024
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "day",
+        "realSun": false,
+        "realClock": false,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-03-20T12:00:00.000Z",
+        "sun": {
+          "declination": -0.4610330930446514,
+          "longitude": 2.04102369970758,
+          "equationMinutes": -8.164094798830481,
+          "vector": [
+            -0.04279804996475239,
+            -0.7846454799714074,
+            0.6184656802763224
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 1,
+        "lastDrawMs": 8,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 23,
+        "failure": ""
+      },
+      "centerPixels": [
+        [
+          38,
+          48,
+          14,
+          255
+        ],
+        [
+          134,
+          126,
+          113,
+          255
+        ],
+        [
+          38,
+          48,
+          14,
+          255
+        ]
+      ]
+    },
+    {
+      "preset": "dusk",
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          768,
+          1024
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "dusk",
+        "realSun": false,
+        "realClock": false,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-03-20T17:50:00.000Z",
+        "sun": {
+          "declination": -0.3649819506268283,
+          "longitude": -85.47749530646769,
+          "equationMinutes": -8.09001877412921,
+          "vector": [
+            -0.9999795869965233,
+            -0.004371680446293712,
+            -0.004659828359306706
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 1,
+        "lastDrawMs": 9,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 19,
+        "failure": ""
+      },
+      "centerPixels": [
+        [
+          38,
+          48,
+          14,
+          255
+        ],
+        [
+          134,
+          126,
+          113,
+          255
+        ],
+        [
+          91,
+          91,
+          68,
+          255
+        ]
+      ]
+    },
+    {
+      "preset": "night",
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          768,
+          1024
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "night",
+        "realSun": false,
+        "realClock": false,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-03-20T00:00:00.000Z",
+        "sun": {
+          "declination": -0.6586504926955097,
+          "longitude": -177.92104032708153,
+          "equationMinutes": -8.315838691673747,
+          "vector": [
+            0.04213514103419792,
+            0.7724209010110541,
+            -0.633711749592273
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 1,
+        "lastDrawMs": 6,
+        "clockInitializedMs": 0,
+        "firstEarthLoadedMs": 17,
+        "failure": ""
+      },
+      "centerPixels": [
+        [
+          38,
+          48,
+          14,
+          255
+        ],
+        [
+          134,
+          126,
+          113,
+          255
+        ],
+        [
+          134,
+          126,
+          113,
+          255
+        ]
+      ]
+    },
+    {
+      "preset": "summer",
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          768,
+          1024
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "summer",
+        "realSun": false,
+        "realClock": false,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-06-21T12:00:00.000Z",
+        "sun": {
+          "declination": 23.452046074516133,
+          "longitude": 0.3320592000555962,
+          "equationMinutes": -1.3282368002224763,
+          "vector": [
+            -0.06658048055466814,
+            -0.46513092919632304,
+            0.8827345344519351
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 1,
+        "lastDrawMs": 7,
+        "clockInitializedMs": 0,
+        "firstEarthLoadedMs": 21,
+        "failure": ""
+      },
+      "centerPixels": [
+        [
+          38,
+          48,
+          14,
+          255
+        ],
+        [
+          134,
+          126,
+          113,
+          255
+        ],
+        [
+          38,
+          48,
+          14,
+          255
+        ]
+      ]
+    },
+    {
+      "preset": "winter",
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          768,
+          1024
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "winter",
+        "realSun": false,
+        "realClock": false,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-12-21T12:00:00.000Z",
+        "sun": {
+          "declination": -23.419890406297714,
+          "longitude": -0.5426314872162266,
+          "equationMinutes": 2.170525948864805,
+          "vector": [
+            -0.0805599852617714,
+            -0.9618518668512908,
+            0.26144038519194013
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 1,
+        "lastDrawMs": 6,
+        "clockInitializedMs": 0,
+        "firstEarthLoadedMs": 16,
+        "failure": ""
+      },
+      "centerPixels": [
+        [
+          38,
+          48,
+          14,
+          255
+        ],
+        [
+          134,
+          126,
+          113,
+          255
+        ],
+        [
+          38,
+          48,
+          14,
+          255
+        ]
+      ]
+    }
+  ],
+  "loads": [
+    {
+      "view": "off",
+      "cache": "cold",
+      "run": 0,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": false,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 5,
+        "firstEarthLoadedMs": null,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 6.7999999998137355,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 7.7999999998137355,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 8.299999999813735,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 8.099999999627471,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 8.400000000372529,
+          "encoded": 9614,
+          "transfer": 9914
+        }
+      ]
+    },
+    {
+      "view": "off",
+      "cache": "cold",
+      "run": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": false,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 3,
+        "firstEarthLoadedMs": null,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 2.2000000001862645,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 2.6000000005587935,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 3.7000000001862645,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 3.5,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 3.7000000001862645,
+          "encoded": 9614,
+          "transfer": 9914
+        }
+      ]
+    },
+    {
+      "view": "off",
+      "cache": "cold",
+      "run": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": false,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": null,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 1.6000000005587935,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 2,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 2.1000000005587935,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 2,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 2.2000000001862645,
+          "encoded": 9614,
+          "transfer": 9914
+        }
+      ]
+    },
+    {
+      "view": "off",
+      "cache": "warm",
+      "run": 0,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": false,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": null,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "off",
+      "cache": "warm",
+      "run": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": false,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": null,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "off",
+      "cache": "warm",
+      "run": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": false,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": null,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "original",
+      "cache": "cold",
+      "run": 0,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 4,
+        "firstEarthLoadedMs": 8,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 8.400000000372529,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 10.5,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 11.600000000558794,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "script.js",
+          "duration": 11.900000000372529,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar.js",
+          "duration": 12.099999999627471,
+          "encoded": 9614,
+          "transfer": 9914
+        },
+        {
+          "name": "blue-marble-512.jpg",
+          "duration": 2.2999999998137355,
+          "encoded": 76205,
+          "transfer": 76505
+        }
+      ]
+    },
+    {
+      "view": "original",
+      "cache": "cold",
+      "run": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 4,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 2.2000000001862645,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 3,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 4.2000000001862645,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 4,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 4.400000000372529,
+          "encoded": 9614,
+          "transfer": 9914
+        },
+        {
+          "name": "blue-marble-512.jpg",
+          "duration": 2.099999999627471,
+          "encoded": 76205,
+          "transfer": 76505
+        }
+      ]
+    },
+    {
+      "view": "original",
+      "cache": "cold",
+      "run": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 4,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 2.2999999998137355,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 2.5,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 4.599999999627471,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 4.099999999627471,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 4.599999999627471,
+          "encoded": 9614,
+          "transfer": 9914
+        },
+        {
+          "name": "blue-marble-512.jpg",
+          "duration": 2.1000000005587935,
+          "encoded": 76205,
+          "transfer": 76505
+        }
+      ]
+    },
+    {
+      "view": "original",
+      "cache": "warm",
+      "run": 0,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 5,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        },
+        {
+          "name": "blue-marble-512.jpg",
+          "duration": 0,
+          "encoded": 76205,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "original",
+      "cache": "warm",
+      "run": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 3,
+        "firstEarthLoadedMs": 5,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        },
+        {
+          "name": "blue-marble-512.jpg",
+          "duration": 0,
+          "encoded": 76205,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "original",
+      "cache": "warm",
+      "run": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "original",
+        "activeView": "original",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        },
+        {
+          "name": "blue-marble-512.jpg",
+          "duration": 0,
+          "encoded": 76205,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "still",
+      "cache": "cold",
+      "run": 0,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "still",
+        "activeView": "still",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 6,
+        "firstEarthLoadedMs": 11,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 8,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 9.200000000186265,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 10.299999999813735,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 10,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 10.200000000186265,
+          "encoded": 9614,
+          "transfer": 9914
+        },
+        {
+          "name": "day.jpg",
+          "duration": 2,
+          "encoded": 42781,
+          "transfer": 43081
+        }
+      ]
+    },
+    {
+      "view": "still",
+      "cache": "cold",
+      "run": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "still",
+        "activeView": "still",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 3,
+        "firstEarthLoadedMs": 7,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 3.599999999627471,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 4.099999999627471,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 4.5,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 4.099999999627471,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 4.3999999994412065,
+          "encoded": 9614,
+          "transfer": 9914
+        },
+        {
+          "name": "day.jpg",
+          "duration": 1.5,
+          "encoded": 42781,
+          "transfer": 43081
+        }
+      ]
+    },
+    {
+      "view": "still",
+      "cache": "cold",
+      "run": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "still",
+        "activeView": "still",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 5,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 1.5,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 1.7000000001862645,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 3.400000000372529,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 3,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 3.3999999994412065,
+          "encoded": 9614,
+          "transfer": 9914
+        },
+        {
+          "name": "day.jpg",
+          "duration": 2.2999999998137355,
+          "encoded": 42781,
+          "transfer": 43081
+        }
+      ]
+    },
+    {
+      "view": "still",
+      "cache": "warm",
+      "run": 0,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "still",
+        "activeView": "still",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 4,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        },
+        {
+          "name": "day.jpg",
+          "duration": 0,
+          "encoded": 42781,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "still",
+      "cache": "warm",
+      "run": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "still",
+        "activeView": "still",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 3,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        },
+        {
+          "name": "day.jpg",
+          "duration": 0,
+          "encoded": 42781,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "still",
+      "cache": "warm",
+      "run": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "still",
+        "activeView": "still",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 4,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        },
+        {
+          "name": "day.jpg",
+          "duration": 0,
+          "encoded": 42781,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "solar",
+      "cache": "cold",
+      "run": 0,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-11-04T09:17:03.629Z",
+        "sun": {
+          "declination": -15.109349473958448,
+          "longitude": 36.65207349622551,
+          "equationMinutes": 16.34170601509776,
+          "vector": [
+            0.5138568630477068,
+            -0.8007981719382142,
+            0.3076904485342121
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": true,
+        "suspended": false,
+        "cadenceMs": 60000,
+        "draws": 1,
+        "lastDrawMs": 16,
+        "clockInitializedMs": 7,
+        "firstEarthLoadedMs": 47,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 9.099999999627471,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 10.100000000558794,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 10.599999999627471,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 10.400000000372529,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 10.399999999441206,
+          "encoded": 9614,
+          "transfer": 9914
+        },
+        {
+          "name": "day.jpg",
+          "duration": 2.1000000005587935,
+          "encoded": 42781,
+          "transfer": 43081
+        },
+        {
+          "name": "night.jpg",
+          "duration": 2.2999999998137355,
+          "encoded": 29326,
+          "transfer": 29626
+        }
+      ]
+    },
+    {
+      "view": "solar",
+      "cache": "cold",
+      "run": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-11-04T09:17:03.727Z",
+        "sun": {
+          "declination": -15.109349473958448,
+          "longitude": 36.65207349622551,
+          "equationMinutes": 16.34170601509776,
+          "vector": [
+            0.5138568630477068,
+            -0.8007981719382142,
+            0.3076904485342121
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": true,
+        "suspended": false,
+        "cadenceMs": 60000,
+        "draws": 1,
+        "lastDrawMs": 6,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 29,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 2.1000000005587935,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 2.400000000372529,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 4.1000000005587935,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 3.8999999994412065,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 4.2999999998137355,
+          "encoded": 9614,
+          "transfer": 9914
+        },
+        {
+          "name": "day.jpg",
+          "duration": 2,
+          "encoded": 42781,
+          "transfer": 43081
+        },
+        {
+          "name": "night.jpg",
+          "duration": 2,
+          "encoded": 29326,
+          "transfer": 29626
+        }
+      ]
+    },
+    {
+      "view": "solar",
+      "cache": "cold",
+      "run": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-11-04T09:17:03.798Z",
+        "sun": {
+          "declination": -15.109349473958448,
+          "longitude": 36.65207349622551,
+          "equationMinutes": 16.34170601509776,
+          "vector": [
+            0.5138568630477068,
+            -0.8007981719382142,
+            0.3076904485342121
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": true,
+        "suspended": false,
+        "cadenceMs": 60000,
+        "draws": 1,
+        "lastDrawMs": 6,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 26,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 1.5,
+          "encoded": 4313,
+          "transfer": 4613
+        },
+        {
+          "name": "motion.css",
+          "duration": 1.7000000001862645,
+          "encoded": 1481,
+          "transfer": 1781
+        },
+        {
+          "name": "script.js",
+          "duration": 2.8999999994412065,
+          "encoded": 15805,
+          "transfer": 16105
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 2.7000000001862645,
+          "encoded": 1895,
+          "transfer": 2195
+        },
+        {
+          "name": "solar.js",
+          "duration": 2.900000000372529,
+          "encoded": 9614,
+          "transfer": 9914
+        },
+        {
+          "name": "day.jpg",
+          "duration": 1.8999999994412065,
+          "encoded": 42781,
+          "transfer": 43081
+        },
+        {
+          "name": "night.jpg",
+          "duration": 2.2999999998137355,
+          "encoded": 29326,
+          "transfer": 29626
+        }
+      ]
+    },
+    {
+      "view": "solar",
+      "cache": "warm",
+      "run": 0,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-11-04T09:17:03.862Z",
+        "sun": {
+          "declination": -15.109349473958448,
+          "longitude": 36.65207349622551,
+          "equationMinutes": 16.34170601509776,
+          "vector": [
+            0.5138568630477068,
+            -0.8007981719382142,
+            0.3076904485342121
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": true,
+        "suspended": false,
+        "cadenceMs": 60000,
+        "draws": 1,
+        "lastDrawMs": 6,
+        "clockInitializedMs": 1,
+        "firstEarthLoadedMs": 20,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        },
+        {
+          "name": "day.jpg",
+          "duration": 0,
+          "encoded": 42781,
+          "transfer": 0
+        },
+        {
+          "name": "night.jpg",
+          "duration": 0,
+          "encoded": 29326,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "solar",
+      "cache": "warm",
+      "run": 1,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-11-04T09:17:03.923Z",
+        "sun": {
+          "declination": -15.109349473958448,
+          "longitude": 36.65207349622551,
+          "equationMinutes": 16.34170601509776,
+          "vector": [
+            0.5138568630477068,
+            -0.8007981719382142,
+            0.3076904485342121
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": true,
+        "suspended": false,
+        "cadenceMs": 60000,
+        "draws": 1,
+        "lastDrawMs": 10,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 25,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        },
+        {
+          "name": "day.jpg",
+          "duration": 0,
+          "encoded": 42781,
+          "transfer": 0
+        },
+        {
+          "name": "night.jpg",
+          "duration": 0,
+          "encoded": 29326,
+          "transfer": 0
+        }
+      ]
+    },
+    {
+      "view": "solar",
+      "cache": "warm",
+      "run": 2,
+      "diagnostics": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-11-04T09:17:03.984Z",
+        "sun": {
+          "declination": -15.109349473958448,
+          "longitude": 36.65207349622551,
+          "equationMinutes": 16.34170601509776,
+          "vector": [
+            0.5138568630477068,
+            -0.8007981719382142,
+            0.3076904485342121
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": true,
+        "suspended": false,
+        "cadenceMs": 60000,
+        "draws": 1,
+        "lastDrawMs": 6,
+        "clockInitializedMs": 2,
+        "firstEarthLoadedMs": 18,
+        "failure": ""
+      },
+      "resources": [
+        {
+          "name": "style.css",
+          "duration": 0,
+          "encoded": 4313,
+          "transfer": 0
+        },
+        {
+          "name": "motion.css",
+          "duration": 0,
+          "encoded": 1481,
+          "transfer": 0
+        },
+        {
+          "name": "script.js",
+          "duration": 0,
+          "encoded": 15805,
+          "transfer": 0
+        },
+        {
+          "name": "solar-math.js",
+          "duration": 0,
+          "encoded": 1895,
+          "transfer": 0
+        },
+        {
+          "name": "solar.js",
+          "duration": 0,
+          "encoded": 9614,
+          "transfer": 0
+        },
+        {
+          "name": "day.jpg",
+          "duration": 0,
+          "encoded": 42781,
+          "transfer": 0
+        },
+        {
+          "name": "night.jpg",
+          "duration": 0,
+          "encoded": 29326,
+          "transfer": 0
+        }
+      ]
+    }
+  ],
+  "runtime": [
+    {
+      "view": "off",
+      "before": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "off",
+        "activeView": "off",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": false,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 6,
+        "firstEarthLoadedMs": null,
+        "failure": ""
+      },
+      "start": {
+        "digital": "10:17",
+        "hand": "matrix(0.906454, 0.422305, -0.422305, 0.906454, 0, 0)"
+      },
+      "end": {
+        "digital": "10:18",
+        "hand": "matrix(0.572655, 0.819796, -0.819796, 0.572655, 0, 0)",
+        "maxRAFGap": 16.80000000000291,
+        "samples": 3901,
+        "diagnostics": {
+          "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "viewport": [
+            1024,
+            768
+          ],
+          "dpr": 1,
+          "requestedView": "off",
+          "activeView": "off",
+          "preset": "dawn",
+          "realSun": true,
+          "realClock": true,
+          "opacity": 0.28,
+          "coordinates": [
+            51.293,
+            4.494
+          ],
+          "solarUTC": null,
+          "sun": null,
+          "loading": false,
+          "ready": false,
+          "timerActive": false,
+          "suspended": false,
+          "cadenceMs": 0,
+          "draws": 0,
+          "lastDrawMs": null,
+          "clockInitializedMs": 6,
+          "firstEarthLoadedMs": null,
+          "failure": ""
+        }
+      }
+    },
+    {
+      "view": "still",
+      "before": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "still",
+        "activeView": "still",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": null,
+        "sun": null,
+        "loading": false,
+        "ready": true,
+        "timerActive": false,
+        "suspended": false,
+        "cadenceMs": 0,
+        "draws": 0,
+        "lastDrawMs": null,
+        "clockInitializedMs": 7,
+        "firstEarthLoadedMs": 13,
+        "failure": ""
+      },
+      "start": {
+        "digital": "10:18",
+        "hand": "matrix(0.557736, 0.830018, -0.830018, 0.557736, 0, 0)"
+      },
+      "end": {
+        "digital": "10:19",
+        "hand": "matrix(0.0665421, 0.997784, -0.997784, 0.0665421, 0, 0)",
+        "maxRAFGap": 16.80000000000291,
+        "samples": 3901,
+        "diagnostics": {
+          "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "viewport": [
+            1024,
+            768
+          ],
+          "dpr": 1,
+          "requestedView": "still",
+          "activeView": "still",
+          "preset": "dawn",
+          "realSun": true,
+          "realClock": true,
+          "opacity": 0.28,
+          "coordinates": [
+            51.293,
+            4.494
+          ],
+          "solarUTC": null,
+          "sun": null,
+          "loading": false,
+          "ready": true,
+          "timerActive": false,
+          "suspended": false,
+          "cadenceMs": 0,
+          "draws": 0,
+          "lastDrawMs": null,
+          "clockInitializedMs": 7,
+          "firstEarthLoadedMs": 13,
+          "failure": ""
+        }
+      }
+    },
+    {
+      "view": "solar",
+      "before": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1024,
+          768
+        ],
+        "dpr": 1,
+        "requestedView": "solar",
+        "activeView": "solar",
+        "preset": "dawn",
+        "realSun": true,
+        "realClock": true,
+        "opacity": 0.28,
+        "coordinates": [
+          51.293,
+          4.494
+        ],
+        "solarUTC": "2026-11-04T09:19:14.495Z",
+        "sun": {
+          "declination": -15.109823862312991,
+          "longitude": 36.10625252653813,
+          "equationMinutes": 16.341656560514302,
+          "vector": [
+            0.5060464702043392,
+            -0.8045927209713091,
+            0.31072097346930705
+          ]
+        },
+        "loading": false,
+        "ready": true,
+        "timerActive": true,
+        "suspended": false,
+        "cadenceMs": 60000,
+        "draws": 1,
+        "lastDrawMs": 13,
+        "clockInitializedMs": 5,
+        "firstEarthLoadedMs": 43,
+        "failure": ""
+      },
+      "start": {
+        "digital": "10:19",
+        "hand": "matrix(0.0489125, 0.998803, -0.998803, 0.0489125, 0, 0)"
+      },
+      "end": {
+        "digital": "10:20",
+        "hand": "matrix(-0.458346, 0.888774, -0.888774, -0.458346, 0, 0)",
+        "maxRAFGap": 16.80000000000291,
+        "samples": 3901,
+        "diagnostics": {
+          "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "viewport": [
+            1024,
+            768
+          ],
+          "dpr": 1,
+          "requestedView": "solar",
+          "activeView": "solar",
+          "preset": "dawn",
+          "realSun": true,
+          "realClock": true,
+          "opacity": 0.28,
+          "coordinates": [
+            51.293,
+            4.494
+          ],
+          "solarUTC": "2026-11-04T09:20:14.508Z",
+          "sun": {
+            "declination": -15.110041136229627,
+            "longitude": 35.85625819189477,
+            "equationMinutes": 16.34163389908738,
+            "vector": [
+              0.5024538258819113,
+              -0.8063112562144437,
+              0.31209343305894105
+            ]
+          },
+          "loading": false,
+          "ready": true,
+          "timerActive": true,
+          "suspended": false,
+          "cadenceMs": 60000,
+          "draws": 2,
+          "lastDrawMs": 9,
+          "clockInitializedMs": 5,
+          "firstEarthLoadedMs": 43,
+          "failure": ""
+        }
+      }
+    }
+  ],
+  "errors": []
+}

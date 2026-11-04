@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Brasschaat Earth and calculated sunlight experiment</title>
+<link rel="stylesheet" href="../../src/style.css"><link rel="stylesheet" href="motion.css">
+<script>window.__TEST_MODE__ = true;</script><style>#solar { position:absolute; width:100%; height:100%; top:0; left:0; display:none; }</style></head><body>
+<div id="controls" hidden>
+<h1>Brasschaat Earth and calculated sunlight</h1>
+<p>Centered globe · 90% diameter · 28% opacity by default. <a href="SOLAR.md">Results and instructions</a> · <a href="index.html">Still compositions</a></p>
+<form id="settings">
+<label>Earth view<select id="view"><option value="solar">Brasschaat · calculated day/night</option><option value="still">Brasschaat · daytime still</option><option value="original">Original still baseline</option><option value="off">Earth off</option></select></label>
+<label>UTC solar preset<select id="preset"><option value="dawn">20 March 2026 · 05:50 dawn</option><option value="day">20 March 2026 · 12:00 day</option><option value="dusk">20 March 2026 · 17:50 dusk</option><option value="night">20 March 2026 · 00:00 night</option><option value="summer">21 June 2026 · 12:00 summer</option><option value="winter">21 December 2026 · 12:00 winter</option></select></label>
+<label>Sunlight<select id="time"><option value="fixed">Fixed UTC preset</option><option value="real">Current date/time</option></select></label>
+<label>Clock<select id="clock"><option value="fixed">Fixed preset · UTC dial</option><option value="real">Real time · local animated dial</option></select></label>
+<label>Opacity<select id="opacity"><option>28</option><option>32</option><option>40</option></select></label>
+<label>Viewport<select id="viewport"><option value="landscape">1024 × 768</option><option value="portrait">768 × 1024</option></select></label>
+</form>
+<p>Stationary geography centered on Brasschaat (51.293°N, 4.494°E), north up. Sunlight uses calculated date/time and season; twilight softness is artistic. NASA daytime September 2004 and nighttime 2016 composites are historical. No live clouds, location permission or remote imagery.</p>
+<p><a id="direct" href="solar.html?standalone=1" target="_blank">Open preview alone</a> · <a href="../../src/" target="_blank">Production baseline</a> · <button id="read-diagnostics" type="button">Read preview diagnostics</button></p>
+<pre id="diagnostics"></pre><div id="frame-space"><iframe id="preview" title="Clock with independent Brasschaat Earth and calculated sunlight"></iframe></div>
+</div>
+<div id="scene" hidden>
+<div id="earth-layer" aria-hidden="true"><div id="globe"><img id="earth" alt=""><canvas id="solar" width="512" height="512"></canvas></div></div>
+<div id="clock-container"><div id="clock-face"><div id="ticks"></div><div id="digital-container"><div id="digital-time">--:--</div><div id="digital-date">--</div></div><div id="hour-hand" class="hand"></div><div id="minute-hand" class="hand"></div><div id="second-hand" class="hand"></div><div id="center-dot"></div></div></div>
+<p id="image-status" role="status"></p>
+</div>
+<noscript>Enable JavaScript to operate the comparison and clock.</noscript>
+<script src="../../src/script.js"></script><script src="solar-math.js"></script><script src="solar.js"></script></body></html>
