@@ -387,7 +387,8 @@
     // Auto-init if we're not in a test environment and default container is present
     document.addEventListener("DOMContentLoaded", function() {
         if (!global.__TEST_MODE__ && document.getElementById('clock-container')) {
-            var clock = initNightstandClock('clock-container');
+            // Earth supplies the changing day/night appearance; production stays black.
+            var clock = initNightstandClock('clock-container', { colorStops: [[0, [0, 0, 0]], [24, [0, 0, 0]]] });
             if (clock) clock.start();
         }
     });

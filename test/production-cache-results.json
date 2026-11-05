@@ -1,0 +1,163 @@
+{
+  "browser": "156.0.8078.4",
+  "date": "2026-11-04T18:24:06.140Z",
+  "checks": [
+    {
+      "width": 1896,
+      "height": 1020,
+      "background": "rgb(0, 0, 0)",
+      "position": "absolute",
+      "opacity": "0.28",
+      "globe": {
+        "x": 489,
+        "y": 51,
+        "width": 918,
+        "height": 918,
+        "top": 51,
+        "right": 1407,
+        "bottom": 969,
+        "left": 489
+      },
+      "dial": {
+        "x": 468.59375,
+        "y": 30.59375,
+        "width": 958.796875,
+        "height": 958.796875,
+        "top": 30.59375,
+        "right": 1427.390625,
+        "bottom": 989.390625,
+        "left": 468.59375
+      },
+      "ticks": 60
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "background": "rgb(0, 0, 0)",
+      "position": "absolute",
+      "opacity": "0.28",
+      "globe": {
+        "x": 166.40625,
+        "y": 38.40625,
+        "width": 691.1875,
+        "height": 691.1875,
+        "top": 38.40625,
+        "right": 857.59375,
+        "bottom": 729.59375,
+        "left": 166.40625
+      },
+      "dial": {
+        "x": 151.046875,
+        "y": 23.046875,
+        "width": 721.90625,
+        "height": 721.90625,
+        "top": 23.046875,
+        "right": 872.953125,
+        "bottom": 744.953125,
+        "left": 151.046875
+      },
+      "ticks": 60
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "background": "rgb(0, 0, 0)",
+      "position": "absolute",
+      "opacity": "0.28",
+      "globe": {
+        "x": 38.40625,
+        "y": 166.40625,
+        "width": 691.1875,
+        "height": 691.1875,
+        "top": 166.40625,
+        "right": 729.59375,
+        "bottom": 857.59375,
+        "left": 38.40625
+      },
+      "dial": {
+        "x": 23.046875,
+        "y": 151.046875,
+        "width": 721.90625,
+        "height": 721.90625,
+        "top": 151.046875,
+        "right": 744.953125,
+        "bottom": 872.953125,
+        "left": 23.046875
+      },
+      "ticks": 60
+    }
+  ],
+  "reproduced": {
+    "background": "rgb(2, 1, 1)",
+    "position": "static",
+    "canvas": {
+      "x": 0,
+      "y": 0,
+      "width": 512,
+      "height": 512,
+      "top": 0,
+      "right": 512,
+      "bottom": 512,
+      "left": 0
+    }
+  },
+  "requests": [
+    {
+      "phase": "seed",
+      "url": "/src/index.html"
+    },
+    {
+      "phase": "seed",
+      "url": "/src/style.css"
+    },
+    {
+      "phase": "seed",
+      "url": "/src/script.js"
+    },
+    {
+      "phase": "seed",
+      "url": "/favicon.ico"
+    },
+    {
+      "phase": "unversioned",
+      "url": "/src/index.html"
+    },
+    {
+      "phase": "unversioned",
+      "url": "/src/earth-math.js"
+    },
+    {
+      "phase": "unversioned",
+      "url": "/src/earth.js"
+    },
+    {
+      "phase": "unversioned",
+      "url": "/src/assets/earth/day.jpg"
+    },
+    {
+      "phase": "unversioned",
+      "url": "/src/assets/earth/night.jpg"
+    },
+    {
+      "phase": "fixed",
+      "url": "/src/index.html"
+    },
+    {
+      "phase": "fixed",
+      "url": "/src/style.css?v=earth-1"
+    },
+    {
+      "phase": "fixed",
+      "url": "/src/script.js?v=earth-1"
+    },
+    {
+      "phase": "fixed",
+      "url": "/src/earth-math.js?v=earth-1"
+    },
+    {
+      "phase": "fixed",
+      "url": "/src/earth.js?v=earth-1"
+    }
+  ],
+  "errors": []
+}

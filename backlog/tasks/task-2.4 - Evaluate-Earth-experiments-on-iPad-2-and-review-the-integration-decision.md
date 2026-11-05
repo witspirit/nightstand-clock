@@ -4,7 +4,7 @@ title: Evaluate Earth experiments on iPad 2 and review the integration decision
 status: To Do
 assignee: []
 created_date: '2026-11-01T19:46:00Z'
-updated_date: '2026-11-03T15:50:00Z'
+updated_date: '2026-11-04T16:54:00Z'
 labels:
   - earth-backdrop
 dependencies:
@@ -66,6 +66,15 @@ created: 2026-11-03T15:50:00Z
 ---
 
 TASK-2.5 now captures the revised stationary Brasschaat-centered day/night experiment and should complete before device evaluation. Brasschaat is confirmed; HTTPS hosting and device geolocation are deferred, as are clouds and other live layers.
+
+---
+
+author: @codex
+created: 2026-11-04T16:54:00Z
+
+---
+
+2026-11-04: user approved moving the chosen TASK-2.5 visual into a production candidate on earth-view before device evaluation is complete. Integration approval is recorded on TASK-2. Actual iPad criteria remain pending. Evaluate the integrated candidate with emphasis on minute redraw/hand smoothness, low-light readability, resume and sustained stability; startup-only costs are secondary. This updates the original evaluate-before-integration ordering without claiming device acceptance or authorizing merge/deployment.
 
 ---
 <!-- COMMENTS:END -->

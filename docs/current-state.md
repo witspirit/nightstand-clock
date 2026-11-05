@@ -1,6 +1,6 @@
 # Nightstand Clock - Current State
 
-Last updated: 2026-11-01. Based on source inspection; this is not a record of target-device validation or the currently uploaded deployment.
+Last updated: 2026-11-05. Based on source inspection; this is not a record of target-device validation or the currently uploaded deployment.
 
 ## What is implemented
 
@@ -8,16 +8,16 @@ Last updated: 2026-11-01. Based on source inspection; this is not a record of ta
 - A circular analog dial with 60 generated tick marks: 12 large hour marks and smaller minute marks, without dial digits.
 - Three hands animated with linear, repeating CSS keyframes. The second, minute, and hour hands complete a rotation in 60 seconds, 60 minutes, and 12 hours respectively.
 - A digital 24-hour `HH:MM` readout and English weekday/month/day date in the lower half of the dial. CSS displays the date in uppercase.
-- A background color interpolated between configurable local-time color stops for night, morning, day, sunset, and evening. These are fixed clock times, not calculated sunrise/sunset times.
-- No Earth imagery or Earth rendering in the clock yet.
+- A fixed black production background, with a stationary Brasschaat-centered Earth providing calculated day/night appearance. The configurable clock-time palette remains available in the test harness.
+- Local 512² NASA Blue Marble (September 2004) and Black Marble (2016) maps, identically projected north-up at approximate Brasschaat town center (51.293°N, 4.494°E). Globe diameter is 90vmin, opacity 40%. Solar illumination varies with UTC date/time and season; twilight softness is artistic.
 
 ## Timing and control
 
 `src/script.js` exposes `initNightstandClock(containerId, options)`. The production page initializes and starts the clock on DOMContentLoaded. Test pages can suppress automatic initialization with `window.__TEST_MODE__` and supply their own time provider.
 
-JavaScript maintenance runs every 1000 ms by default. Digital text and background color normally update only when the visible minute changes; the background has a one-second CSS color transition. Hand motion runs through CSS animations rather than a JavaScript requestAnimationFrame loop. Negative animation delays align each hand with the supplied time, including milliseconds.
+JavaScript maintenance runs every 1000 ms by default. Digital text and palette maintenance normally update only when the visible minute changes. The production initializer supplies constant black color stops; test pages can still use the original palette. Hand motion runs through CSS animations rather than a JavaScript requestAnimationFrame loop. Negative animation delays align each hand with the supplied time, including milliseconds.
 
-Hand animations resynchronize at startup, on a manual update or palette change, and when maintenance detects time moving backward or a forward jump greater than the maintenance interval plus the default 4000 ms threshold. There is no explicit visibility/resume event handler; a time jump can be detected when maintenance next runs. Actual resume behavior remains to be checked on the iPad.
+Hand animations resynchronize at startup, on a manual update or palette change, and when maintenance detects time moving backward or a forward jump greater than the maintenance interval plus the default 4000 ms threshold. The clock maintenance detects time jumps when it next runs. The independent Earth renderer explicitly pauses on visibility-hidden/page-hide and redraws current sunlight on resume. Actual resume behavior remains to be checked on the iPad.
 
 The returned controller supports start, stop, immediate update, enabling/disabling hand animation, and reading, changing, or resetting the color palette. An optional callback reports hand resynchronizations. With animation disabled, hands use directly assigned transforms. Console logging remains for script load and clock startup.
 
@@ -48,8 +48,14 @@ The intended target is old Safari on an iPad 2. Prefixed transform, flex, and an
 
 The actual iPad is currently unavailable. Its installed OS/browser version and current runtime performance have not been verified in this work. [Earlier device observations](ipad2_observations.md) mention oversized digital text and imperfect second-hand smoothness; these are historical reports, not measurements of the current source.
 
-## Earth backdrop research and follow-up
+## Earth backdrop implementation and acceptance
 
-[Earth backdrop feasibility](earth-backdrop-feasibility.md), produced by TASK-2.1, compares rendering options, documents primary-source compatibility evidence and NASA imagery options, and defines a repeatable baseline/comparison protocol. Its recommendation is a subdued local still image first, with optional motion explored later.
+TASK-2.5 established the preferred stationary day/night appearance. The user approved moving toward the main implementation on the `earth-view` branch; TASK-3 integrates it into the normal `src/` entry point. See [candidate acceptance and checks](earth-integration.md).
 
-TASK-2.2 covers still-image compositions, TASK-2.3 motion/lighting, and TASK-2.4 actual iPad evaluation and user review. Each follow-up task links directly to the feasibility document. Experiment code and assets must stay outside `src/`; production integration remains subject to explicit user approval after review. See [hosting](hosting.md) for the existing production upload arrangement.
+`earth-math.js` implements the validated NOAA approximate solar direction in the fixed view basis. `earth.js` prepares day/night pixel buffers once and blends on a 512² Canvas once per minute, with no continuous Earth draw loop, new image requests during ordinary updates, or clock-hand animation changes. A hidden page cancels its Earth timer and pending load callbacks; resume uses current time without catch-up. A missing renderer/night image falls back to the local daytime still; a missing day image leaves the black clock. Source maps, transformations, terms and credits are bundled in [the deployed attribution file](../src/assets/earth/ATTRIBUTION.md).
+
+The production candidate uses a black background so the Earth is the only changing background appearance. This is reviewable on the feature branch; no user-facing mode selector is added. The original palette editor and isolated experiments remain accessible under `test/`.
+
+The user's operating model is a dedicated iPad clock running continuously for days/weeks. Priorities are hand smoothness during the minute redraw, low-light readability, bounded retained state and sustained stability. Startup-only download/decoding is secondary. Fixed working memory is an implementation estimate, not a reason by itself to reject the candidate.
+
+TASK-2.4 remains pending for actual iPad behavior, including an overnight/longer trial. Simulation and desktop observations do not prove old-Safari compatibility or days of physical-device stability. Mainline merge and deployment require acceptance of the branch candidate. [Hosting](hosting.md) covers the complete source bundle; it has not been deployed by this work.

@@ -4,7 +4,7 @@ title: Explore a subtle Earth backdrop before deciding on clock integration
 status: To Do
 assignee: []
 created_date: '2026-11-01T19:45:00Z'
-updated_date: '2026-11-03T15:45:00Z'
+updated_date: '2026-11-04T16:54:00Z'
 labels:
   - earth-backdrop
 dependencies: []
@@ -58,6 +58,15 @@ created: 2026-11-03T15:45:00Z
 ---
 
 User confirmed the normal/default location is Brasschaat, Belgium. User is exploring optional adaptation to the display device location; this is a feasibility question, not yet an instruction to implement continuous tracking. Candidate behavior: explicit Use device location action, approximate low-power fix, retained manual Brasschaat fallback on denial/error, refresh on request or appropriate resume rather than continuous high-accuracy tracking. Browser geolocation requires permission and normally HTTPS on modern browsers; docs/hosting.md currently describes HTTP S3 website hosting, so hosting and old-iPad Safari behavior must be checked before relying on it. Location would determine globe orientation; date/time would determine illumination independently.
+
+---
+
+author: @codex
+created: 2026-11-04T16:54:00Z
+
+---
+
+User review 2026-11-04: likes the Brasschaat-centered Blue Marble/Black Marble transition and explicitly requests moving toward the main implementation on earth-view, with a later acceptable version going to mainline. Integration is now authorized on the feature branch; actual iPad acceptance remains pending. Prioritize sustained hand smoothness, periodic redraw cost and days/weeks of stable operation. Startup-only loading and modest fixed memory are secondary; avoid resolution above useful display detail. User is considering fixed black instead of the time palette.
 
 ---
 <!-- COMMENTS:END -->
