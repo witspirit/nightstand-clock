@@ -2,7 +2,7 @@
 
 ## Upload
 
-The deployable bundle is the entire `src/` tree, including the Earth scripts, both local JPEGs and `assets/earth/ATTRIBUTION.md`. Uploading only the original three clock files would omit the backdrop. Keep imagery credits alongside the deployed assets. The HTML references a shared CSS/JS revision (`?v=earth-2`); bump that revision whenever those shipped resources change. When deploying, serve the HTML with revalidation (for example, `Cache-Control: no-cache`) so clients discover the current resource URLs. See the [cached-resource correction](earth-integration.md#cached-resource-upgrade-correction--2026-11-04).
+The deployable bundle is the entire `src/` tree, including `brightness.js`, the Earth scripts, both local JPEGs and `assets/earth/ATTRIBUTION.md`. Uploading only the original three clock files would omit the backdrop and brightness controls. Keep imagery credits alongside the deployed assets. The HTML references a shared CSS/JS revision (`?v=brightness-1`); bump that revision whenever those shipped resources change. When deploying, serve the HTML with revalidation (for example, `Cache-Control: no-cache`) so clients discover the current resource URLs. See the [cached-resource correction](earth-integration.md#cached-resource-upgrade-correction--2026-11-04) and [standalone brightness controls](brightness.md).
 
 The `earth-view` implementation is a branch candidate. Review it and complete the iPad acceptance checks in [Earth integration](earth-integration.md) before the separately authorized mainline merge/deployment.
 

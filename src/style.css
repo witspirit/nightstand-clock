@@ -216,3 +216,108 @@ html, body {
 #earth-backdrop ~ #clock-container {
     position: relative;
 }
+
+/* Production calibration controls. The closed corner target emits no light. */
+#brightness-toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: 64px;
+    z-index: 20;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+#brightness-toggle:focus {
+    outline: none;
+}
+#brightness-panel[hidden] {
+    display: none;
+}
+#brightness-panel {
+    position: fixed;
+    z-index: 21;
+    top: 68px;
+    right: 12px;
+    width: 300px;
+    max-width: calc(100% - 24px);
+    max-height: calc(100% - 80px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+    background: #080808;
+    color: #888;
+    border: 1px solid #252525;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.brightness-heading {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+#brightness-panel button, #brightness-panel select {
+    background: #151515;
+    color: #999;
+    border: 1px solid #333;
+    border-radius: 4px;
+    min-height: 44px;
+    padding: 4px 12px;
+    font: inherit;
+}
+#brightness-close {
+    float: right;
+}
+#brightness-panel label {
+    display: block;
+    clear: both;
+    margin-top: 12px;
+}
+#brightness-panel label span {
+    float: right;
+}
+#brightness-mode {
+    width: 100%;
+}
+#brightness-panel p {
+    margin-top: 12px;
+    font-size: 13px;
+}
+#brightness-panel input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    height: 44px;
+    background: transparent;
+}
+#brightness-panel input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    background: #383838;
+    border-radius: 2px;
+}
+#brightness-panel input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    margin-top: -12px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    background: #777;
+}
+#brightness-panel input[type="range"]::-moz-range-track {
+    height: 4px;
+    background: #383838;
+}
+#brightness-panel input[type="range"]::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    background: #777;
+}
