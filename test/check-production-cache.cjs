@@ -36,7 +36,7 @@ const server=http.createServer((req,res)=>{
   phase='fixed';await p.reload();await p.waitForFunction(()=>getComputedStyle(document.getElementById('earth-surface')).display==='block');
   for(const [width,height] of [[1896,1020],[1024,768],[768,1024]]){
    await p.setViewportSize({width,height});const d=await p.evaluate(()=>{const g=document.getElementById('earth-backdrop'),c=document.getElementById('clock-face');return {background:getComputedStyle(document.body).backgroundColor,position:getComputedStyle(g).position,opacity:getComputedStyle(g).opacity,globe:g.getBoundingClientRect().toJSON(),dial:c.getBoundingClientRect().toJSON(),ticks:document.querySelectorAll('.tick').length};});
-   assert.equal(d.background,'rgb(0, 0, 0)');assert.equal(d.position,'absolute');assert.equal(d.opacity,'0.4');assert.equal(d.ticks,60);
+   assert.equal(d.background,'rgb(0, 0, 0)');assert.equal(d.position,'absolute');assert.equal(d.opacity,'1');assert.equal(d.ticks,60);
    assert(Math.abs(d.globe.width-Math.min(width,height)*.9)<.1);assert(Math.abs(d.globe.x+d.globe.width/2-width/2)<.1);assert(Math.abs(d.globe.y+d.globe.height/2-height/2)<.1);
    assert(Math.abs(d.globe.x+d.globe.width/2-d.dial.x-d.dial.width/2)<.1);assert(Math.abs(d.globe.y+d.globe.height/2-d.dial.y-d.dial.height/2)<.1);
    assert(d.dial.y>=0 && d.dial.y+d.dial.height<=height+.1);results.checks.push({width,height,...d});await p.screenshot({path:`/tmp/production-cache-after-${width}.jpg`});

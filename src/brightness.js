@@ -7,9 +7,9 @@
     if (!clock || !earth || !panel) return;
 
     var key = 'nightstand-brightness-v1';
-    var settings = { mode: 'auto', day: { clock: 100, earth: 40 }, night: { clock: 12, earth: 40 } };
+    var settings = { mode: 'auto', day: { clock: 100, earth: 100 }, night: { clock: 12, earth: 40 } };
     var toggle = document.getElementById('brightness-toggle');
-    var mode = document.getElementById('brightness-mode');
+    var modeButtons = document.getElementById('brightness-mode').querySelectorAll('button');
     var clockInput = document.getElementById('clock-brightness');
     var earthInput = document.getElementById('earth-brightness');
     var storageNote = document.getElementById('brightness-storage');
@@ -56,7 +56,10 @@
             earth.style.opacity = profile.earth / 100;
             applied = signature;
         }
-        mode.value = settings.mode;
+        for (var i = 0; i < modeButtons.length; i++) {
+            var selected = modeButtons[i].getAttribute('data-profile') === settings.mode;
+            modeButtons[i].setAttribute('aria-pressed', selected ? 'true' : 'false');
+        }
         clockInput.value = profile.clock;
         earthInput.value = profile.earth;
         document.getElementById('clock-brightness-value').textContent = profile.clock + '%';
@@ -80,9 +83,12 @@
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' || e.keyCode === 27) { show(false); toggle.focus(); }
     });
-    mode.addEventListener('change', function () {
-        if (validMode(mode.value)) { settings.mode = mode.value; apply(); save(); }
-    });
+    for (var buttonIndex = 0; buttonIndex < modeButtons.length; buttonIndex++) {
+        modeButtons[buttonIndex].addEventListener('click', function () {
+            var nextMode = this.getAttribute('data-profile');
+            if (validMode(nextMode)) { settings.mode = nextMode; apply(); save(); }
+        });
+    }
     function change(layer, input) {
         settings[activeProfile()][layer] = intensity(Number(input.value), settings[activeProfile()][layer]);
         apply(); save();

@@ -24,6 +24,11 @@ const server = http.createServer((req, res) => {
     async function slide(id, value) {
         await page.locator(id).evaluate((el, value) => { el.value = value; el.dispatchEvent(new Event('input', {bubbles:true})); }, String(value));
     }
+    async function selectProfile(name, target = page) {
+        await target.locator('#brightness-mode [data-profile="' + name + '"]').tap();
+        assert.equal(await target.locator('#brightness-mode [aria-pressed="true"]').count(), 1);
+        assert.equal(await target.locator('#brightness-mode [aria-pressed="true"]').getAttribute('data-profile'), name);
+    }
     try {
         // November: Brussels is UTC+1. Start just before local 20:00.
         await page.clock.install({time:new Date('2026-11-07T18:59:58Z')});
@@ -31,7 +36,7 @@ const server = http.createServer((req, res) => {
         await page.locator('#earth-surface').waitFor({state:'visible'});
         assert(await page.locator('#brightness-panel').isHidden());
         assert.equal(await opacity('#clock-container'), 1);
-        assert.equal(await opacity('#earth-backdrop'), .4);
+        assert.equal(await opacity('#earth-backdrop'), 1);
         assert.equal(await page.locator('meta[name="apple-mobile-web-app-capable"]').getAttribute('content'), 'yes');
         assert.equal(await page.locator('meta[name="apple-mobile-web-app-status-bar-style"]').getAttribute('content'), 'black');
         await page.clock.runFor(2100);
@@ -42,7 +47,7 @@ const server = http.createServer((req, res) => {
         await slide('#earth-brightness', 75);
         assert.equal(await opacity('#clock-container'), .05);
         assert.equal(await opacity('#earth-backdrop'), .75);
-        await page.selectOption('#brightness-mode', 'day');
+        await selectProfile('day');
         assert.equal(await opacity('#clock-container'), 1);
         await slide('#clock-brightness', 62);
         await slide('#earth-brightness', 55);
@@ -58,8 +63,9 @@ const server = http.createServer((req, res) => {
         assert(await page.locator('#brightness-panel').isHidden());
         assert.equal(await opacity('#clock-container'), .62);
         assert.equal(await opacity('#earth-backdrop'), .55);
+        assert.equal(await page.locator('#brightness-mode [aria-pressed="true"]').getAttribute('data-profile'), 'day');
         await page.locator('#brightness-toggle').tap();
-        await page.selectOption('#brightness-mode', 'auto');
+        await selectProfile('auto');
         assert.equal(await opacity('#clock-container'), .05);
         assert.equal(await opacity('#earth-backdrop'), .75);
         // Both off must still leave the corner target and controls operable.
@@ -67,7 +73,7 @@ const server = http.createServer((req, res) => {
         await page.locator('#brightness-close').tap();
         await page.locator('#brightness-toggle').tap();
         assert(await page.locator('#brightness-panel').isVisible());
-        await page.selectOption('#brightness-mode', 'day');
+        await selectProfile('day');
         await page.setViewportSize({width:768,height:1024});
         const bounds = await page.locator('#brightness-panel').boundingBox();
         assert(bounds.x >= 0 && bounds.y >= 0 && bounds.x + bounds.width <= 768 && bounds.y + bounds.height <= 1024);
@@ -78,7 +84,7 @@ const server = http.createServer((req, res) => {
         await page.setViewportSize({width:1024,height:768});
         await page.locator('#brightness-toggle').tap();
         await page.screenshot({path:'/tmp/brightness-panel-landscape.png'});
-        await page.selectOption('#brightness-mode', 'auto');
+        await selectProfile('auto');
         // Hidden and repeated resume events must not duplicate timers or miss morning switching.
         await page.evaluate(() => window.dispatchEvent(new Event('pagehide')));
         await page.clock.setSystemTime(new Date('2026-11-08T06:59:59Z'));
@@ -93,13 +99,13 @@ const server = http.createServer((req, res) => {
         await page.clock.resume();
         await page.waitForFunction(previous => getComputedStyle(document.getElementById('second-hand')).transform !== previous, hand);
         for (const resource of ['style.css','script.js','earth.js','earth-math.js','brightness.js']) {
-            assert(requests.some(url => url.endsWith('/' + resource + '?v=brightness-1')));
+            assert(requests.some(url => url.endsWith('/' + resource + '?v=brightness-2')));
         }
         // Corrupt and hostile saved values must never leave a broken or over-range UI.
-        for (const saved of ['{broken', 'null', JSON.stringify({mode:'invalid', day:{clock:null, earth:'white'}}), JSON.stringify({mode:'night',night:{clock:-20,earth:500}})]) {
+        for (const saved of ['{broken', 'null', JSON.stringify({mode:'invalid', day:{clock:null, earth:'white'}}), JSON.stringify({mode:'night',night:{clock:-20,earth:500}}), JSON.stringify({mode:'day',day:{clock:100,earth:40}})]) {
             await page.evaluate(({key,saved}) => localStorage.setItem(key,saved), {key,saved});
             await page.reload();
-            const expected = saved.includes('500') ? [0,1] : [1,.4];
+            const expected = saved.includes('500') ? [0,1] : saved.includes('day":{"clock":100') ? [1,.4] : [1,1];
             assert.equal(await opacity('#clock-container'), expected[0]);
             assert.equal(await opacity('#earth-backdrop'), expected[1]);
         }
@@ -113,7 +119,7 @@ const server = http.createServer((req, res) => {
             }, readsBlocked);
             await blocked.goto(origin + '/src/');
             await blocked.locator('#brightness-toggle').tap();
-            await blocked.selectOption('#brightness-mode','night');
+            await selectProfile('night', blocked);
             await blocked.locator('#clock-brightness').evaluate(el => { el.value = '7'; el.dispatchEvent(new Event('change')); });
             assert.equal(await blocked.locator('#clock-container').evaluate(el => Number(el.style.opacity)), .07);
             assert((await blocked.locator('#brightness-storage').textContent()).includes('unavailable'));

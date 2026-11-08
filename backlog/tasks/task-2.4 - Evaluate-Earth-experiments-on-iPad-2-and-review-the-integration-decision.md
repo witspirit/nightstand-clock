@@ -4,7 +4,7 @@ title: Evaluate Earth experiments on iPad 2 and review the integration decision
 status: To Do
 assignee: []
 created_date: '2026-11-01T19:46:00Z'
-updated_date: '2026-11-04T16:54:00Z'
+updated_date: '2026-11-08T12:14:00Z'
 labels:
   - earth-backdrop
 dependencies:
@@ -38,6 +38,12 @@ Desktop appearance and nominal browser support cannot establish suitability for 
 - [ ] #4 Present the results for the user's explicit proceed/revise/stop decision and record their response when received; passing technical checks alone does not approve integration.
 - [ ] #5 Only after explicit user approval, create a separate integration task referencing the chosen experiment, its settings, fallback behavior, and validation requirements. Without approval, src/ and deployment remain unchanged.
 <!-- AC:END -->
+
+## Implementation Notes
+
+<!-- SECTION:NOTES:BEGIN -->
+2026-11-08 first integrated brightness trial reported by user on actual iPad 2: controls seem to work, but profile dropdown does not visibly show its selected profile. Day clock and Earth can both be set to 100 percent. Night brightness still awaits actual nighttime evaluation. TASK-5 addresses the selector display and Day defaults. Device/browser version, timed stability and remaining acceptance checks are not established by this report.
+<!-- SECTION:NOTES:END -->
 
 ## Comments
 

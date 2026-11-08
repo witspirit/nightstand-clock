@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Nightstand Clock</title>
     <!-- Bump the shared asset version when shipped CSS/JS changes. -->
-    <link rel="stylesheet" href="style.css?v=brightness-1">
+    <link rel="stylesheet" href="style.css?v=brightness-2">
 </head>
 
 <body>
@@ -33,12 +33,11 @@
         aria-controls="brightness-panel" aria-expanded="false"></button>
     <section id="brightness-panel" role="region" aria-label="Brightness controls" hidden>
         <div class="brightness-heading">Brightness <button id="brightness-close" type="button">Hide</button></div>
-        <label for="brightness-mode">Profile</label>
-        <select id="brightness-mode">
-            <option value="auto">Auto</option>
-            <option value="day">Day</option>
-            <option value="night">Night</option>
-        </select>
+        <div id="brightness-mode" role="group" aria-label="Profile">
+            <button type="button" data-profile="auto" aria-pressed="true">Auto</button>
+            <button type="button" data-profile="day" aria-pressed="false">Day</button>
+            <button type="button" data-profile="night" aria-pressed="false">Night</button>
+        </div>
         <p id="brightness-profile"></p>
         <label for="clock-brightness">Clock <span id="clock-brightness-value"></span></label>
         <input id="clock-brightness" type="range" min="0" max="100" step="1" value="12">
@@ -48,10 +47,10 @@
         <p id="brightness-storage">Settings save on this device. Tap the top-right corner to show or hide controls.</p>
     </section>
     <!-- Apply saved intensity before starting the clock or loading Earth imagery. -->
-    <script src="brightness.js?v=brightness-1"></script>
-    <script src="script.js?v=brightness-1"></script>
-    <script src="earth-math.js?v=brightness-1"></script>
-    <script src="earth.js?v=brightness-1"></script>
+    <script src="brightness.js?v=brightness-2"></script>
+    <script src="script.js?v=brightness-2"></script>
+    <script src="earth-math.js?v=brightness-2"></script>
+    <script src="earth.js?v=brightness-2"></script>
 </body>
 
 </html>

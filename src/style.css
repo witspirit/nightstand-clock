@@ -261,7 +261,7 @@ html, body {
     font-size: 18px;
     margin-bottom: 12px;
 }
-#brightness-panel button, #brightness-panel select {
+#brightness-panel button {
     background: #151515;
     color: #999;
     border: 1px solid #333;
@@ -283,6 +283,21 @@ html, body {
 }
 #brightness-mode {
     width: 100%;
+    clear: both;
+    padding-top: 12px;
+    white-space: nowrap;
+}
+#brightness-mode button {
+    -webkit-appearance: none;
+    width: 31%;
+    padding: 4px;
+}
+#brightness-mode button[aria-pressed="true"] {
+    color: #bbb;
+    background: #333;
+    border-color: #999;
+    font-weight: bold;
+    text-decoration: underline;
 }
 #brightness-panel p {
     margin-top: 12px;
